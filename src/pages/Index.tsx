@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -146,7 +147,13 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold tracking-tight">SNR</div>
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/ef6dc9b2-9ef4-4cc0-80eb-9b472145c3d4.png" 
+                alt="SNR Logo" 
+                className="h-8 w-auto"
+              />
+            </div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
@@ -257,7 +264,7 @@ const Index = () => {
             <div className="animate-fade-in">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face" 
+                  src="/lovable-uploads/996c09b0-1d8b-4d4f-8bab-efba6117d01a.png" 
                   alt="Seelam Naveen Reddy - Front-End Developer"
                   className="w-full h-full object-cover"
                 />
@@ -562,3 +569,4 @@ const Index = () => {
 };
 
 export default Index;
+
