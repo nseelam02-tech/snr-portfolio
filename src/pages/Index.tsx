@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Github, ExternalLink, Mail, MapPin, Calendar } from 'lucide-react';
+import { ArrowRight, Github, ExternalLink, Mail, MapPin, Calendar, Download, Menu, X } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -14,6 +13,7 @@ const Index = () => {
     email: '',
     message: ''
   });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -61,6 +61,15 @@ const Index = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMobileMenuOpen(false);
+  };
+
+  const downloadResume = () => {
+    // Create a placeholder resume download
+    toast({
+      title: "Resume Download",
+      description: "Resume download will be available soon. Please contact me directly for now.",
+    });
   };
 
   const projects = [
@@ -123,20 +132,69 @@ const Index = () => {
     "UI/UX Design", "Figma", "Adobe XD", "Photoshop", "Responsive Design", "Git"
   ];
 
+  const interests = [
+    { category: "Food", items: ["Recipe Development", "Food Photography", "Culinary Traditions", "Restaurant Reviews"] },
+    { category: "Travel", items: ["Cultural Exploration", "Local Cuisines", "Travel Photography", "Adventure Planning"] },
+    { category: "Technology", items: ["Web Development", "Design Systems", "UX Research", "Mobile Apps"] },
+    { category: "Creative", items: ["Content Creation", "Video Editing", "Digital Art", "Blogging"] }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+      {/* Enhanced Navigation */}
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold tracking-tight">SNR</div>
-            <div className="hidden md:flex space-x-8">
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-gray-900 transition-colors">About</button>
               <button onClick={() => scrollToSection('work')} className="text-gray-600 hover:text-gray-900 transition-colors">Work</button>
+              <button onClick={() => scrollToSection('interests')} className="text-gray-600 hover:text-gray-900 transition-colors">Interests</button>
               <button onClick={() => scrollToSection('blog')} className="text-gray-600 hover:text-gray-900 transition-colors">Blog</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-gray-900 transition-colors">Contact</button>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={downloadResume}
+                className="border-black text-black hover:bg-black hover:text-white"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Resume
+              </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
+
+          {/* Mobile Navigation */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-gray-100">
+              <div className="flex flex-col space-y-4 pt-4">
+                <button onClick={() => scrollToSection('about')} className="text-left text-gray-600 hover:text-gray-900 transition-colors">About</button>
+                <button onClick={() => scrollToSection('work')} className="text-left text-gray-600 hover:text-gray-900 transition-colors">Work</button>
+                <button onClick={() => scrollToSection('interests')} className="text-left text-gray-600 hover:text-gray-900 transition-colors">Interests</button>
+                <button onClick={() => scrollToSection('blog')} className="text-left text-gray-600 hover:text-gray-900 transition-colors">Blog</button>
+                <button onClick={() => scrollToSection('contact')} className="text-left text-gray-600 hover:text-gray-900 transition-colors">Contact</button>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={downloadResume}
+                  className="w-fit border-black text-black hover:bg-black hover:text-white"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Resume
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -244,8 +302,38 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Interests & Hobbies Section */}
+      <section id="interests" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">Interests & Hobbies</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Beyond coding, I'm passionate about exploring cultures through food, travel, and creative expression
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {interests.map((interest, index) => (
+              <Card key={index} className="text-center animate-fade-in border-0 shadow-sm hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl font-medium">{interest.category}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    {interest.items.map((item, itemIndex) => (
+                      <div key={itemIndex} className="text-gray-600 text-sm">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SNR FoodleR Blog Section */}
-      <section id="blog" className="py-24 bg-white">
+      <section id="blog" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">SNR FoodleR Blog</h2>
@@ -298,7 +386,7 @@ const Index = () => {
       </section>
 
       {/* Media & Collaborations Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">Media & Collaborations</h2>
@@ -371,7 +459,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-white">
+      <section id="contact" className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">Let's Connect</h2>
