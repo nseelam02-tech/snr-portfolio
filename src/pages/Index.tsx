@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -237,10 +238,13 @@ const Index = () => {
             <div className="animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-tight">About Me</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                I'm Seelam Naveen Reddy, a passionate Front-End Developer and UI/UX Designer who believes in creating digital experiences that truly matter. My journey in technology is beautifully intertwined with my love for food and travel, which I share through my blog, SNR FoodleR.
+                I'm Seelam Naveen Reddy, a passionate Front-End Developer and UI/UX Designer with expertise in creating seamless digital experiences. With a strong foundation in modern web technologies and design principles, I specialize in building responsive, user-centric applications that bridge functionality with aesthetic appeal.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                My professional journey spans developing scalable React applications, crafting intuitive user interfaces, and implementing design systems that enhance user engagement. I'm proficient in JavaScript, TypeScript, React, and modern CSS frameworks, with a keen eye for detail in both code quality and visual design.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Through my work, I strive to bridge the gap between technology and cultural experiences, creating interfaces that not only function flawlessly but also tell compelling stories. Whether I'm crafting a user interface or exploring a new cuisine, I bring the same attention to detail and passion for excellence.
+                Beyond technology, I'm the creator of SNR FoodleR, a food and travel blog where I share my culinary adventures and cultural discoveries. This passion project showcases my content creation skills and reflects my belief that great experiences—whether digital or culinary—require the same attention to craftsmanship and user experience.
               </p>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill, index) => (
@@ -251,8 +255,12 @@ const Index = () => {
               </div>
             </div>
             <div className="animate-fade-in">
-              <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center">
-                <div className="text-6xl">🧑‍💻</div>
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face" 
+                  alt="Seelam Naveen Reddy - Front-End Developer"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -403,7 +411,7 @@ const Index = () => {
                   <p className="text-gray-600">Latest YouTube Content</p>
                 </div>
               </div>
-              <Button variant="outline" onClick={() => window.open('https://youtube.com/@snrfoodler', '_blank')}>
+              <Button variant="outline" onClick={() => window.open('https://www.youtube.com/@SNR_FoodleR', '_blank')}>
                 Visit Channel
               </Button>
             </div>
