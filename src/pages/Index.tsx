@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -141,6 +139,52 @@ const Index = () => {
     { category: "Creative", items: ["Content Creation", "Video Editing", "Digital Art", "Blogging"] }
   ];
 
+  const professionalWork = [
+    {
+      title: "Real-Time Financial Insights Dashboard",
+      company: "FactSet (Offsite)",
+      period: "Jan 2024 – April 2025 | Full Time",
+      role: "Frontend Developer",
+      description: "Developed a real-time data dashboard for internal use, integrating live financial data using REST APIs. Built responsive UI with React.js and Chart.js, ensuring seamless data visualisation and real-time sync.",
+      technologies: ["React.js", "Chart.js", "REST APIs", "JavaScript", "Responsive Design"],
+      type: "development"
+    },
+    {
+      title: "Corporate Website Revamp & Maintenance",
+      company: "PayodSoft Consulting Services (Offsite)",
+      period: "March 2022 – Nov 2023 | Full Time", 
+      role: "Frontend Developer",
+      description: "Redesigned and maintained the company's main website, ensuring performance, cross-browser compatibility, and responsive design. Coordinated with marketing and backend teams for regular updates and feature deployments.",
+      technologies: ["HTML", "CSS", "JavaScript", "UI/UX Enhancements", "Cross-browser Compatibility"],
+      type: "development"
+    }
+  ];
+
+  const designTraining = [
+    {
+      title: "XpressEats – Rail Food Delivery App",
+      company: "Designers Academy (Offsite)",
+      period: "Jan 2025 – Mar 2025 | As a trainee",
+      role: "UX/UI Designer",
+      description: "Designed an end-to-end mobile experience to solve real train travel food issues like hygiene, limited options, and lack of customisation. Created user flows, wireframes, high-fidelity mockups, and conducted usability testing.",
+      technologies: ["User Research", "Wireframing", "Prototyping", "Usability Testing", "Mobile Design"],
+      type: "design",
+      behanceLink: "https://www.behance.net/naveen_seelam",
+      mediumLink: "https://medium.com/@snrdesigns"
+    },
+    {
+      title: "TNV Collection – Fashion E-commerce App",
+      company: "Designers Academy (Offsite)",
+      period: "Jan 2025 – Mar 2025 | As a trainee",
+      role: "UX/UI Designer", 
+      description: "Reimagined an existing fashion website into a mobile-first shopping experience. Conducted user research, defined personas, built user flows, and developed a clean, elegant UI with strong visual hierarchy.",
+      technologies: ["User Research", "Persona Development", "Style Guide", "Mobile-First Design", "Visual Hierarchy"],
+      type: "design",
+      behanceLink: "https://www.behance.net/naveen_seelam",
+      mediumLink: "https://medium.com/@snrdesigns"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Navigation */}
@@ -278,41 +322,86 @@ const Index = () => {
       <section id="work" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">Professional Work</h2>
+            <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">Professional Experience</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A showcase of projects that blend technical excellence with thoughtful design
+              Real-time development experience and design training showcase
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 animate-fade-in border-0 shadow-sm">
-                <CardHeader>
-                  <CardTitle className="text-xl font-medium">{project.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex gap-4">
-                    <Button variant="outline" size="sm" onClick={() => window.open(project.liveDemo, '_blank')}>
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => window.open(project.github, '_blank')}>
-                      <Github className="w-4 h-4 mr-2" />
-                      GitHub
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          
+          {/* Frontend Development Experience */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-medium mb-8 text-center">Frontend Development Experience</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {professionalWork.map((project, index) => (
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 animate-fade-in border-0 shadow-sm">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <Badge variant="outline" className="mb-2">{project.role}</Badge>
+                    </div>
+                    <CardTitle className="text-xl font-medium">{project.title}</CardTitle>
+                    <div className="text-sm text-gray-600 mb-2">
+                      <div className="font-medium">{project.company}</div>
+                      <div>{project.period}</div>
+                    </div>
+                    <CardDescription className="text-base leading-relaxed">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* UI/UX Design Training */}
+          <div>
+            <h3 className="text-2xl font-medium mb-8 text-center">UI/UX Design Training Projects</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {designTraining.map((project, index) => (
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 animate-fade-in border-0 shadow-sm">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <Badge variant="outline" className="mb-2 bg-purple-50 text-purple-700 border-purple-200">{project.role}</Badge>
+                    </div>
+                    <CardTitle className="text-xl font-medium">{project.title}</CardTitle>
+                    <div className="text-sm text-gray-600 mb-2">
+                      <div className="font-medium">{project.company}</div>
+                      <div>{project.period}</div>
+                    </div>
+                    <CardDescription className="text-base leading-relaxed">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex gap-4">
+                      <Button variant="outline" size="sm" onClick={() => window.open(project.behanceLink, '_blank')}>
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Behance
+                      </Button>
+                      <Button variant="outline" size="sm" onClick={() => window.open(project.mediumLink, '_blank')}>
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Medium
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -377,25 +466,10 @@ const Index = () => {
                   <CardTitle className="text-xl font-medium line-clamp-2">{post.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {post.excerpt}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" size="sm" onClick={() => window.open('https://snrfoodler.com', '_blank')}>
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Button 
-              size="lg"
-              onClick={() => window.open('https://snrfoodler.com', '_blank')}
-              className="bg-black hover:bg-gray-800 text-white px-8 py-3"
-            >
-              Visit SNR FoodleR
-            </Button>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -569,4 +643,3 @@ const Index = () => {
 };
 
 export default Index;
-
