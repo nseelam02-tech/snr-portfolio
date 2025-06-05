@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -145,7 +146,7 @@ const Index = () => {
       company: "FactSet (Offsite)",
       period: "Jan 2024 – April 2025 | Full Time",
       role: "Frontend Developer",
-      description: "Developed a real-time data dashboard for internal use, integrating live financial data using REST APIs. Built responsive UI with React.js and Chart.js, ensuring seamless data visualisation and real-time sync.",
+      description: "Developed a real-time data dashboard for internal use, integrating live financial data using REST APIs. Built responsive UI with React.js and Chart.js, ensuring seamless data visualisation and real-time sync. Collaborated with backend teams to design scalable APIs and maintain performance under live updates.",
       technologies: ["React.js", "Chart.js", "REST APIs", "JavaScript", "Responsive Design"],
       type: "development"
     },
@@ -154,7 +155,7 @@ const Index = () => {
       company: "PayodSoft Consulting Services (Offsite)",
       period: "March 2022 – Nov 2023 | Full Time", 
       role: "Frontend Developer",
-      description: "Redesigned and maintained the company's main website, ensuring performance, cross-browser compatibility, and responsive design. Coordinated with marketing and backend teams for regular updates and feature deployments.",
+      description: "Redesigned and maintained the company's main website, ensuring performance, cross-browser compatibility, and responsive design. Used HTML, CSS, and JavaScript to build new sections and implement UI/UX enhancements. Coordinated with marketing and backend teams for regular updates and feature deployments.",
       technologies: ["HTML", "CSS", "JavaScript", "UI/UX Enhancements", "Cross-browser Compatibility"],
       type: "development"
     }
@@ -166,7 +167,7 @@ const Index = () => {
       company: "Designers Academy (Offsite)",
       period: "Jan 2025 – Mar 2025 | As a trainee",
       role: "UX/UI Designer",
-      description: "Designed an end-to-end mobile experience to solve real train travel food issues like hygiene, limited options, and lack of customisation. Created user flows, wireframes, high-fidelity mockups, and conducted usability testing.",
+      description: "Designed an end-to-end mobile experience to solve real train travel food issues like hygiene, limited options, and lack of customisation. Created user flows, wireframes, high-fidelity mockups, and conducted usability testing to ensure seamless ordering and delivery experience. Allowed users to browse regional cuisines, filter by preferences (veg/non-veg), and order food directly to their train seat.",
       technologies: ["User Research", "Wireframing", "Prototyping", "Usability Testing", "Mobile Design"],
       type: "design",
       behanceLink: "https://www.behance.net/naveen_seelam",
@@ -177,7 +178,7 @@ const Index = () => {
       company: "Designers Academy (Offsite)",
       period: "Jan 2025 – Mar 2025 | As a trainee",
       role: "UX/UI Designer", 
-      description: "Reimagined an existing fashion website into a mobile-first shopping experience. Conducted user research, defined personas, built user flows, and developed a clean, elegant UI with strong visual hierarchy.",
+      description: "Reimagined an existing fashion website into a mobile-first shopping experience tailored for a modern, style-conscious audience. Conducted user research, defined personas, built user flows, and developed a clean, elegant UI with strong visual hierarchy. Designed style guide, prototypes, and improved usability based on testing insights (e.g., enabling browsing before login).",
       technologies: ["User Research", "Persona Development", "Style Guide", "Mobile-First Design", "Visual Hierarchy"],
       type: "design",
       behanceLink: "https://www.behance.net/naveen_seelam",
@@ -193,7 +194,7 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/ef6dc9b2-9ef4-4cc0-80eb-9b472145c3d4.png" 
+                src="/lovable-uploads/SNR Logo.png" 
                 alt="SNR Logo" 
                 className="h-8 w-auto"
               />
@@ -308,7 +309,7 @@ const Index = () => {
             <div className="animate-fade-in">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="/lovable-uploads/996c09b0-1d8b-4d4f-8bab-efba6117d01a.png" 
+                  src="/lovable-uploads/SNR.jpg" 
                   alt="Seelam Naveen Reddy - Front-End Developer"
                   className="w-full h-full object-cover"
                 />
@@ -466,10 +467,10 @@ const Index = () => {
                   <CardTitle className="text-xl font-medium line-clamp-2">{post.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {post.excerpt}
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
