@@ -542,7 +542,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Media & Collaborations Section - Premium Design */}
+      {/* Media & Collaborations Section - Simplified */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
@@ -552,57 +552,27 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
-            <div className="animate-fade-in">
-              <h3 className="text-3xl font-light mb-8 text-gray-900">Latest from YouTube</h3>
-              <div className="aspect-video bg-gray-100 rounded-3xl overflow-hidden mb-8 relative group cursor-pointer shadow-2xl">
-                <img 
-                  src="https://snrfoodler.com/wp-content/uploads/2024/03/The-Best-Ever-Fish-Curry-3.jpg" 
-                  alt="The Best Ever Fish Curry - SNR FoodleR"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-12 h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              {mediaChannels.map((channel, index) => (
+                <a 
+                  key={index}
+                  href={channel.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-6 p-6 bg-white rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-100 group"
+                >
+                  <div className={`w-14 h-14 bg-gradient-to-r ${channel.color} rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-105 transition-transform duration-200`}>
+                    {channel.platform.slice(0, 2).toUpperCase()}
                   </div>
-                </div>
-              </div>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => window.open('https://www.youtube.com/@SNR_FoodleR', '_blank')}
-                className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white rounded-full px-8 py-4 font-medium transition-all duration-200"
-              >
-                <ExternalLink className="w-5 h-5 mr-2" />
-                Visit Channel
-              </Button>
-            </div>
-            
-            <div className="animate-fade-in">
-              <h3 className="text-3xl font-light mb-8 text-gray-900">Social Platforms</h3>
-              <div className="space-y-6">
-                {mediaChannels.map((channel, index) => (
-                  <a 
-                    key={index}
-                    href={channel.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-6 p-6 bg-white rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-100 group"
-                  >
-                    <div className={`w-14 h-14 bg-gradient-to-r ${channel.color} rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-105 transition-transform duration-200`}>
-                      {channel.platform.slice(0, 2).toUpperCase()}
-                    </div>
-                    <div className="flex-1">
-                      <div className="font-medium text-gray-900 text-lg">{channel.platform}</div>
-                      <div className="text-gray-600 text-sm font-light">{channel.handle}</div>
-                      <div className="text-gray-500 text-sm font-light mt-1">{channel.description}</div>
-                    </div>
-                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                  </a>
-                ))}
-              </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-gray-900 text-lg">{channel.platform}</div>
+                    <div className="text-gray-600 text-sm font-light">{channel.handle}</div>
+                    <div className="text-gray-500 text-sm font-light mt-1">{channel.description}</div>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
