@@ -91,7 +91,7 @@ const Index = () => {
     {
       title: "SNR FoodleR Blog",
       description: "Custom-built food and travel blog with CMS integration and social features.",
-      technologies: ["React", "Node.js", "MongoDB", "Adobe XD"],
+      technologies: ["React", "MySQL", "MongoDB", "Adobe XD"],
       liveDemo: "https://snrfoodler.com",
       github: "#"
     },
@@ -129,8 +129,8 @@ const Index = () => {
   ];
 
   const skills = [
-    "HTML", "CSS", "JavaScript", "React", "TypeScript", "Node.js",
-    "UI/UX Design", "Figma", "Adobe XD", "Photoshop", "Responsive Design", "Git"
+    "HTML", "CSS", "JavaScript", "React", "TypeScript", "Python",
+    "UI/UX Design", "Figma", "Adobe XD", "Photoshop", "Responsive Design", "Git", "GitHub", "MySQL", "REST API"
   ];
 
   const interests = [
@@ -487,10 +487,16 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
               <h3 className="text-2xl font-medium mb-6">Latest from YouTube</h3>
-              <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">📹</div>
-                  <p className="text-gray-600">Latest YouTube Content</p>
+              <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden mb-6 relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=560&h=315&fit=crop" 
+                  alt="Latest YouTube Content"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
+                    <div className="w-0 h-0 border-l-6 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
+                  </div>
                 </div>
               </div>
               <Button variant="outline" onClick={() => window.open('https://www.youtube.com/@SNR_FoodleR', '_blank')}>
@@ -632,7 +638,13 @@ const Index = () => {
       <footer className="py-12 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold tracking-tight mb-4 md:mb-0">SNR</div>
+            <div className="flex items-center mb-4 md:mb-0">
+              <img 
+                src="/lovable-uploads/SNR Logo.png" 
+                alt="SNR Logo" 
+                className="h-8 w-auto"
+              />
+            </div>
             <div className="text-gray-600 text-center md:text-left">
               © 2024 Seelam Naveen Reddy. Crafted with passion for technology and culture.
             </div>
