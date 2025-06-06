@@ -73,60 +73,25 @@ const Index = () => {
     });
   };
 
-  const projects = [
-    {
-      title: "SNR FoodleR - Food & Travel Blog",
-      description: "A comprehensive food and travel blog featuring recipe tutorials, restaurant reviews, and cultural exploration with advanced content management and social integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express.js"],
-      liveDemo: "https://snrfoodler.com",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&h=300&fit=crop"
-    },
-    {
-      title: "Real-Time Financial Dashboard",
-      description: "Interactive dashboard for financial data visualization with live updates, responsive charts, and comprehensive data analytics for business intelligence.",
-      technologies: ["React", "TypeScript", "Chart.js", "REST APIs", "Tailwind CSS"],
-      liveDemo: "#",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop"
-    },
-    {
-      title: "XpressEats - Train Food Delivery",
-      description: "Mobile-first food delivery app designed for train passengers with real-time tracking, regional cuisine options, and seamless ordering experience.",
-      technologies: ["React Native", "Node.js", "MongoDB", "UI/UX Design", "Figma"],
-      liveDemo: "#",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1563379091339-03246963d90a?w=500&h=300&fit=crop"
-    },
-    {
-      title: "TNV Fashion E-commerce Platform",
-      description: "Modern e-commerce platform with advanced filtering, wishlist functionality, secure payment integration, and responsive mobile-first design.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Stripe API"],
-      liveDemo: "#",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=300&fit=crop"
-    }
-  ];
-
   const blogPosts = [
     {
       title: "Mastering the Art of Italian Pizza Dough",
       excerpt: "Discover the secrets behind creating the perfect pizza dough that rivals authentic Italian pizzerias with traditional techniques and modern tips...",
-      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=250&fit=crop",
+      image: "https://www.snrfoodler.com/wp-content/uploads/2023/04/pizza-dough-recipe-scaled.jpg",
       date: "March 15, 2024",
       readTime: "8 min read"
     },
     {
       title: "The Best Ever Fish Curry",
       excerpt: "A traditional coastal recipe passed down through generations, bringing authentic flavors and aromatic spices to your kitchen...",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=250&fit=crop",
+      image: "https://www.snrfoodler.com/wp-content/uploads/2023/04/fish-curry-recipe-scaled.jpg",
       date: "March 10, 2024",
       readTime: "6 min read"
     },
     {
       title: "7 Cup Burfi | Seven Cups Sweet Recipe",
       excerpt: "Learn to make this classic Indian sweet that melts in your mouth with just seven simple ingredients and traditional cooking methods...",
-      image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=250&fit=crop",
+      image: "https://www.snrfoodler.com/wp-content/uploads/2023/04/7-cup-burfi-recipe-scaled.jpg",
       date: "March 5, 2024",
       readTime: "5 min read"
     }
@@ -377,56 +342,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Portfolio Section */}
+      {/* Enhanced Work Section */}
       <section id="work" className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-thin mb-8 tracking-tight text-gray-900">Featured Projects</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light">
-              Showcasing my expertise in modern web development, UI/UX design, and full-stack solutions
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12 mb-20">
-            {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 animate-fade-in border-0 shadow-lg bg-white rounded-3xl overflow-hidden transform hover:scale-105">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <CardHeader className="p-8">
-                  <CardTitle className="text-xl font-medium text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-200">{project.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed text-gray-600 font-light mb-6">
-                    {project.description}
-                  </CardDescription>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="text-xs bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors duration-200">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex gap-4">
-                    <Button variant="outline" size="sm" onClick={() => window.open(project.liveDemo, '_blank')} className="rounded-full hover:scale-105 transition-transform duration-200">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => window.open(project.github, '_blank')} className="rounded-full hover:scale-105 transition-transform duration-200">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                  </div>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-
           {/* Professional Experience */}
           <div className="mb-20">
-            <h3 className="text-3xl font-light mb-12 text-center text-gray-800">Professional Development Experience</h3>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-thin mb-8 tracking-tight text-gray-900">Professional Experience</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light">
+                Showcasing my expertise in modern web development and full-stack solutions
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 gap-10">
               {professionalWork.map((project, index) => (
                 <Card key={index} className="group hover:shadow-xl transition-all duration-300 animate-fade-in border-0 shadow-lg bg-white rounded-2xl overflow-hidden transform hover:scale-105">
