@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -291,16 +292,21 @@ const Index = () => {
         </div>
         
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <div className="space-y-8">
-            {/* Animated title with creative "Seelam" animation */}
-            <div className="space-y-4">
+          <div className="space-y-12">
+            {/* Enhanced animated title with improved "Seelam" animation */}
+            <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl font-thin tracking-tight text-gray-900">
                 <span className="inline-block opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-                  <span className="relative">
-                    <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent animate-pulse font-medium">
-                      Seelam
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-wide relative">
+                      <span className="inline-block animate-pulse">S</span>
+                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.1s' }}>e</span>
+                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.2s' }}>e</span>
+                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.3s' }}>l</span>
+                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.4s' }}>a</span>
+                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.5s' }}>m</span>
                     </span>
-                    <span className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 rounded-lg blur opacity-20 animate-pulse"></span>
+                    <div className="absolute -inset-2 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-emerald-600/20 rounded-lg blur-lg animate-pulse opacity-60"></div>
                   </span>
                 </span>
                 {' '}
@@ -312,7 +318,7 @@ const Index = () => {
                   Reddy
                 </span>
               </h1>
-              <div className="h-1 w-24 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 mx-auto rounded-full opacity-0 transform scale-x-0 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}></div>
+              <div className="h-1 w-32 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full opacity-0 transform scale-x-0 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}></div>
             </div>
             
             {/* Animated subtitle */}
@@ -325,14 +331,14 @@ const Index = () => {
               Crafting digital experiences with passion from Hyderabad, India
             </p>
             
-            {/* Animated buttons with staggered entrance */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1.4s', animationFillMode: 'forwards' }}>
+            {/* Improved buttons layout with better spacing and alignment */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 opacity-0 transform translate-y-8 animate-fade-in max-w-md mx-auto" style={{ animationDelay: '1.4s', animationFillMode: 'forwards' }}>
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('work')}
-                className="bg-black hover:bg-gray-800 text-white px-10 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-2xl group"
+                className="w-full sm:w-auto bg-gradient-to-r from-gray-900 to-black hover:from-black hover:to-gray-800 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-2xl group min-w-[200px]"
               >
-                <span className="flex items-center">
+                <span className="flex items-center justify-center">
                   Explore My Work
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </span>
@@ -341,16 +347,19 @@ const Index = () => {
                 variant="outline" 
                 size="lg"
                 onClick={() => window.open('https://snrfoodler.com', '_blank')}
-                className="border-black text-black hover:bg-black hover:text-white px-10 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-xl"
+                className="w-full sm:w-auto border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-xl min-w-[200px]"
               >
-                Read My Blog
+                <span className="flex items-center justify-center">
+                  Read My Blog
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </span>
               </Button>
             </div>
             
-            {/* Floating CSS/HTML code animation */}
+            {/* Enhanced floating CSS/HTML code animation */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
-              <div className="text-xs font-mono text-gray-400 animate-pulse">
-                &lt;div className="developer"&gt;passionate&lt;/div&gt;
+              <div className="text-sm font-mono text-gray-400 animate-pulse bg-gray-50/50 px-4 py-2 rounded-lg backdrop-blur-sm">
+                &lt;div className="passionate-developer"&gt;creating magic&lt;/div&gt;
               </div>
             </div>
           </div>
