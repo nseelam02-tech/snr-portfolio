@@ -144,8 +144,17 @@ const Index = () => {
       company: "PayodSoft Consulting Services (Offsite)",
       period: "March 2022 – Nov 2023 | Full Time", 
       role: "Frontend Developer",
-      description: "Redesigned and maintained the company's main website, ensuring optimal performance, cross-browser compatibility, and responsive design. Used HTML, CSS, and JavaScript to build new sections and implement modern UI/UX enhancements. Coordinated with marketing and backend teams for regular updates and feature deployments.",
-      technologies: ["HTML", "CSS", "JavaScript", "UI/UX Enhancements", "Cross-browser Compatibility"],
+      description: "Redesigned and maintained the company's main website, ensuring optimal performance, cross-browser compatibility, and responsive design. Used HTML, CSS, JavaScript, and Tailwind CSS to build new sections and implement modern UI/UX enhancements. Integrated Node.js APIs for dynamic content management and coordinated with marketing teams for regular updates.",
+      technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Node.js", "Cross-browser Compatibility"],
+      type: "development"
+    },
+    {
+      title: "Chipotle (Mexican Grill Restaurant Interface)",
+      company: "PayodSoft Consulting Services (Offsite)",
+      period: "March 2022 – Nov 2023 | Part of Full Time", 
+      role: "UI Developer",
+      description: "An internal web interface for restaurant kitchen crews to track food quantities and requirements in real time using smart camera integration. This system helped streamline the food prep process. Developed modular, responsive React components and integrated Redux for state management with Redux Saga for handling side effects.",
+      technologies: ["React.js", "HTML", "CSS", "Tailwind CSS", "JavaScript", "Redux", "Redux Saga"],
       type: "development"
     }
   ];
@@ -231,7 +240,7 @@ const Index = () => {
                 variant="outline" 
                 size="sm" 
                 onClick={downloadResume}
-                className="bg-black text-white hover:bg-gray-800 border-black transition-all duration-200 hover:scale-105 font-medium"
+                className="bg-black text-white hover:bg-gray-900 border-black transition-all duration-200 hover:scale-105 font-medium shadow-lg"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Resume
@@ -260,7 +269,7 @@ const Index = () => {
                   variant="outline" 
                   size="sm" 
                   onClick={downloadResume}
-                  className="w-fit bg-black text-white hover:bg-gray-800 border-black"
+                  className="w-fit bg-black text-white hover:bg-gray-900 border-black shadow-lg"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Resume
@@ -271,36 +280,62 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section with enhanced animations */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-thin tracking-tight mb-8 text-gray-900 animate-fade-in">
-              Seelam Naveen Reddy
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light animate-fade-in">
+      {/* Enhanced Hero Section with Apple-style animations */}
+      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-20 relative overflow-hidden">
+        {/* Floating background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-50 rounded-full opacity-20 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-50 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-gray-100 to-transparent rounded-full opacity-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+          <div className="space-y-8">
+            {/* Animated title with staggered entrance */}
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-7xl font-thin tracking-tight text-gray-900 opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+                Seelam Naveen Reddy
+              </h1>
+              <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full opacity-0 transform scale-x-0 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}></div>
+            </div>
+            
+            {/* Animated subtitle */}
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
               Front-End Developer | UI/UX Designer | Food & Travel Enthusiast
             </p>
-            <p className="text-lg text-gray-500 mb-12 font-light animate-fade-in">
+            
+            {/* Animated location */}
+            <p className="text-lg text-gray-500 font-light opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
               Crafting digital experiences with passion from Hyderabad, India
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
+            
+            {/* Animated buttons with staggered entrance */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1.4s', animationFillMode: 'forwards' }}>
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('work')}
-                className="bg-black hover:bg-gray-800 text-white px-10 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105 transform"
+                className="bg-black hover:bg-gray-800 text-white px-10 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-2xl group"
               >
-                Explore My Work
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <span className="flex items-center">
+                  Explore My Work
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </span>
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
                 onClick={() => window.open('https://snrfoodler.com', '_blank')}
-                className="border-black text-black hover:bg-black hover:text-white px-10 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105 transform"
+                className="border-black text-black hover:bg-black hover:text-white px-10 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-xl"
               >
                 Read My Blog
               </Button>
+            </div>
+            
+            {/* Floating scroll indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
+              <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center">
+                <div className="w-1 h-2 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
+              </div>
             </div>
           </div>
         </div>
