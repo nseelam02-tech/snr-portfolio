@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -135,17 +134,8 @@ const Index = () => {
       company: "FactSet (Offsite)",
       period: "Jan 2024 – April 2025 | Full Time",
       role: "Frontend Developer",
-      description: "Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using REST APIs. Built responsive UI with React.js and Chart.js, ensuring seamless data visualisation and real-time sync. Collaborated with backend teams to design scalable APIs and maintain performance under live updates.",
-      technologies: ["React.js", "Chart.js", "REST APIs", "JavaScript", "Responsive Design"],
-      type: "development"
-    },
-    {
-      title: "Corporate Website Revamp & Maintenance",
-      company: "PayodSoft Consulting Services (Offsite)",
-      period: "March 2022 – Nov 2023 | Full Time", 
-      role: "Frontend Developer",
-      description: "Redesigned and maintained the company's main website, ensuring optimal performance, cross-browser compatibility, and responsive design. Used HTML, CSS, JavaScript, and Tailwind CSS to build new sections and implement modern UI/UX enhancements. Integrated Node.js APIs for dynamic content management and coordinated with marketing teams for regular updates.",
-      technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Node.js", "Cross-browser Compatibility"],
+      description: "Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using Node.js APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.",
+      technologies: ["React.js", "HTML", "CSS", "Node.js", "JavaScript", "API Integration"],
       type: "development"
     },
     {
@@ -153,7 +143,7 @@ const Index = () => {
       company: "PayodSoft Consulting Services (Offsite)",
       period: "March 2022 – Nov 2023 | Part of Full Time", 
       role: "UI Developer",
-      description: "An internal web interface for restaurant kitchen crews to track food quantities and requirements in real time using smart camera integration. This system helped streamline the food prep process. Developed modular, responsive React components and integrated Redux for state management with Redux Saga for handling side effects.",
+      description: "An internal web interface for restaurant kitchen crews to track food quantities and requirements in real time using smart camera integration. This system helped streamline the food prep process. Developed modular, responsive React components and integrated Redux for state management with Redux Saga for handling side effects. Collaborated with designers and backend teams to ensure data accuracy and applied SCSS for custom styling.",
       technologies: ["React.js", "HTML", "CSS", "Tailwind CSS", "JavaScript", "Redux", "Redux Saga"],
       type: "development"
     }
@@ -280,23 +270,49 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Enhanced Hero Section with Apple-style animations */}
+      {/* Enhanced Hero Section with Creative Animations */}
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-20 relative overflow-hidden">
-        {/* Floating background elements */}
+        {/* Creative Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-50 rounded-full opacity-20 animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-50 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-gray-100 to-transparent rounded-full opacity-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+          {/* Floating code elements */}
+          <div className="absolute top-20 left-10 text-6xl font-mono text-gray-100 animate-pulse opacity-20 select-none">{'</>'}</div>
+          <div className="absolute top-40 right-20 text-4xl font-mono text-blue-100 animate-pulse opacity-30 select-none" style={{ animationDelay: '1s' }}>{'{ }'}</div>
+          <div className="absolute bottom-40 left-20 text-5xl font-mono text-purple-100 animate-pulse opacity-25 select-none" style={{ animationDelay: '2s' }}>{'<div/>'}</div>
+          <div className="absolute bottom-20 right-40 text-3xl font-mono text-green-100 animate-pulse opacity-20 select-none" style={{ animationDelay: '3s' }}>{'function()'}</div>
+          
+          {/* Geometric shapes */}
+          <div className="absolute top-32 right-10 w-20 h-20 border-2 border-blue-200 rotate-45 animate-spin opacity-20" style={{ animationDuration: '20s' }}></div>
+          <div className="absolute bottom-32 left-16 w-16 h-16 bg-gradient-to-r from-purple-200 to-pink-200 rounded-full animate-bounce opacity-30" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 right-32 w-12 h-12 border-2 border-green-200 animate-pulse opacity-25" style={{ animationDelay: '2s' }}></div>
+          
+          {/* Gradient orbs */}
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-20 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-green-100 to-blue-100 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           <div className="space-y-8">
-            {/* Animated title with staggered entrance */}
+            {/* Animated title with creative "Seelam" animation */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-thin tracking-tight text-gray-900 opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-                Seelam Naveen Reddy
+              <h1 className="text-5xl md:text-7xl font-thin tracking-tight text-gray-900">
+                <span className="inline-block opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+                  <span className="relative">
+                    <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent animate-pulse font-medium">
+                      Seelam
+                    </span>
+                    <span className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 rounded-lg blur opacity-20 animate-pulse"></span>
+                  </span>
+                </span>
+                {' '}
+                <span className="inline-block opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+                  Naveen
+                </span>
+                {' '}
+                <span className="inline-block opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
+                  Reddy
+                </span>
               </h1>
-              <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full opacity-0 transform scale-x-0 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 mx-auto rounded-full opacity-0 transform scale-x-0 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}></div>
             </div>
             
             {/* Animated subtitle */}
@@ -331,10 +347,10 @@ const Index = () => {
               </Button>
             </div>
             
-            {/* Floating scroll indicator */}
+            {/* Floating CSS/HTML code animation */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
-              <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center">
-                <div className="w-1 h-2 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
+              <div className="text-xs font-mono text-gray-400 animate-pulse">
+                &lt;div className="developer"&gt;passionate&lt;/div&gt;
               </div>
             </div>
           </div>
