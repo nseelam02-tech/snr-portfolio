@@ -297,17 +297,17 @@ const Index = () => {
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl font-thin tracking-tight text-gray-900">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-                  <span className="relative overflow-hidden">
+                  <span className="relative overflow-hidden h-16 md:h-20 flex items-center">
                     <span className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-wide animate-slideUp" style={{ animationDelay: '0.2s' }}>
                       Seelam
                     </span>
                   </span>
-                  <span className="relative overflow-hidden">
+                  <span className="relative overflow-hidden h-16 md:h-20 flex items-center">
                     <span className="inline-block animate-slideUp" style={{ animationDelay: '0.6s' }}>
                       Naveen
                     </span>
                   </span>
-                  <span className="relative overflow-hidden">
+                  <span className="relative overflow-hidden h-16 md:h-20 flex items-center">
                     <span className="inline-block animate-slideUp" style={{ animationDelay: '1s' }}>
                       Reddy
                     </span>
