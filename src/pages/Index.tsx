@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -297,37 +298,37 @@ const Index = () => {
               <h1 className="text-5xl md:text-7xl font-thin tracking-tight text-gray-900">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
                   <span className="relative overflow-hidden">
-                    <span className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-wide animate-fade-in transform translate-y-full" style={{ animation: 'slideUp 1s ease-out 0.2s forwards', transform: 'translateY(100%)' }}>
+                    <span className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-wide animate-slideUp" style={{ animationDelay: '0.2s' }}>
                       Seelam
                     </span>
                   </span>
                   <span className="relative overflow-hidden">
-                    <span className="inline-block animate-fade-in transform translate-y-full" style={{ animation: 'slideUp 1s ease-out 0.6s forwards', transform: 'translateY(100%)' }}>
+                    <span className="inline-block animate-slideUp" style={{ animationDelay: '0.6s' }}>
                       Naveen
                     </span>
                   </span>
                   <span className="relative overflow-hidden">
-                    <span className="inline-block animate-fade-in transform translate-y-full" style={{ animation: 'slideUp 1s ease-out 1s forwards', transform: 'translateY(100%)' }}>
+                    <span className="inline-block animate-slideUp" style={{ animationDelay: '1s' }}>
                       Reddy
                     </span>
                   </span>
                 </div>
               </h1>
-              <div className="h-1 w-32 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full opacity-0 transform scale-x-0 animate-fade-in" style={{ animationDelay: '1.4s', animationFillMode: 'forwards' }}></div>
+              <div className="h-1 w-32 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full animate-scaleX" style={{ animationDelay: '1.4s' }}></div>
             </div>
             
             {/* Animated subtitle */}
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1.6s', animationFillMode: 'forwards' }}>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light animate-slideUp" style={{ animationDelay: '1.6s' }}>
               Front-End Developer | UI/UX Designer | Food & Travel Enthusiast
             </p>
             
             {/* Animated location */}
-            <p className="text-lg text-gray-500 font-light opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1.8s', animationFillMode: 'forwards' }}>
+            <p className="text-lg text-gray-500 font-light animate-slideUp" style={{ animationDelay: '1.8s' }}>
               Crafting digital experiences with passion from Hyderabad, India
             </p>
             
             {/* Single button */}
-            <div className="flex justify-center opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
+            <div className="flex justify-center animate-slideUp" style={{ animationDelay: '2s' }}>
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('work')}
@@ -342,7 +343,7 @@ const Index = () => {
           </div>
         </div>
 
-        <style jsx>{`
+        <style>{`
           @keyframes slideUp {
             from {
               transform: translateY(100%);
@@ -352,6 +353,29 @@ const Index = () => {
               transform: translateY(0);
               opacity: 1;
             }
+          }
+
+          @keyframes scaleX {
+            from {
+              transform: scaleX(0);
+              opacity: 0;
+            }
+            to {
+              transform: scaleX(1);
+              opacity: 1;
+            }
+          }
+
+          .animate-slideUp {
+            animation: slideUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(100%);
+          }
+
+          .animate-scaleX {
+            animation: scaleX 1s ease-out forwards;
+            opacity: 0;
+            transform: scaleX(0);
           }
         `}</style>
       </section>
