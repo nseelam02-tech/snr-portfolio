@@ -181,7 +181,7 @@ const Index = () => {
       handle: "@snrdesigns",
       description: "Professional updates and industry insights",
       color: "from-blue-600 to-blue-700",
-      link: "https://www.linkedin.com/in/snrdesigns"
+      link: "https://www.linkedin.com/in/seelam-naveen"
     },
     {
       platform: "Twitter",
