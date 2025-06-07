@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -75,23 +74,23 @@ const Index = () => {
 
   const blogPosts = [
     {
-      title: "Mastering the Art of Italian Pizza Dough",
-      excerpt: "Discover the secrets behind creating the perfect pizza dough that rivals authentic Italian pizzerias with traditional techniques and modern tips...",
-      image: "https://www.snrfoodler.com/wp-content/uploads/2023/04/pizza-dough-recipe-scaled.jpg",
+      title: "The Best Ever Fish Curry",
+      excerpt: "A traditional coastal recipe passed down through generations, bringing authentic flavors and aromatic spices to your kitchen...",
+      image: "/lovable-uploads/c1a06e2b-5481-476d-9bf6-b4fa1db8e6e3.png",
       date: "March 15, 2024",
       readTime: "8 min read"
     },
     {
-      title: "The Best Ever Fish Curry",
-      excerpt: "A traditional coastal recipe passed down through generations, bringing authentic flavors and aromatic spices to your kitchen...",
-      image: "https://www.snrfoodler.com/wp-content/uploads/2023/04/fish-curry-recipe-scaled.jpg",
+      title: "7 Cup Burfi | Seven Cups Sweet Recipe",
+      excerpt: "Learn to make this classic Indian sweet that melts in your mouth with just seven simple ingredients and traditional cooking methods...",
+      image: "/lovable-uploads/2ebfd292-a648-4106-8113-e385a115024f.png",
       date: "March 10, 2024",
       readTime: "6 min read"
     },
     {
-      title: "7 Cup Burfi | Seven Cups Sweet Recipe",
-      excerpt: "Learn to make this classic Indian sweet that melts in your mouth with just seven simple ingredients and traditional cooking methods...",
-      image: "https://www.snrfoodler.com/wp-content/uploads/2023/04/7-cup-burfi-recipe-scaled.jpg",
+      title: "Mastering the Art of Italian Pizza Dough",
+      excerpt: "Discover the secrets behind creating the perfect pizza dough that rivals authentic Italian pizzerias with traditional techniques and modern tips...",
+      image: "/lovable-uploads/a0d3e689-310f-4a3c-a5d0-15fbc6039e15.png",
       date: "March 5, 2024",
       readTime: "5 min read"
     }
@@ -293,77 +292,68 @@ const Index = () => {
         
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           <div className="space-y-12">
-            {/* Enhanced animated title with improved "Seelam" animation */}
+            {/* Enhanced animated title with designerrs.com style animation */}
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl font-thin tracking-tight text-gray-900">
-                <span className="inline-block opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-                  <span className="relative inline-block">
-                    <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-wide relative">
-                      <span className="inline-block animate-pulse">S</span>
-                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.1s' }}>e</span>
-                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.2s' }}>e</span>
-                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.3s' }}>l</span>
-                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.4s' }}>a</span>
-                      <span className="inline-block animate-pulse" style={{ animationDelay: '0.5s' }}>m</span>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+                  <span className="relative overflow-hidden">
+                    <span className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-wide animate-fade-in transform translate-y-full" style={{ animation: 'slideUp 1s ease-out 0.2s forwards', transform: 'translateY(100%)' }}>
+                      Seelam
                     </span>
-                    <div className="absolute -inset-2 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-emerald-600/20 rounded-lg blur-lg animate-pulse opacity-60"></div>
                   </span>
-                </span>
-                {' '}
-                <span className="inline-block opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-                  Naveen
-                </span>
-                {' '}
-                <span className="inline-block opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-                  Reddy
-                </span>
+                  <span className="relative overflow-hidden">
+                    <span className="inline-block animate-fade-in transform translate-y-full" style={{ animation: 'slideUp 1s ease-out 0.6s forwards', transform: 'translateY(100%)' }}>
+                      Naveen
+                    </span>
+                  </span>
+                  <span className="relative overflow-hidden">
+                    <span className="inline-block animate-fade-in transform translate-y-full" style={{ animation: 'slideUp 1s ease-out 1s forwards', transform: 'translateY(100%)' }}>
+                      Reddy
+                    </span>
+                  </span>
+                </div>
               </h1>
-              <div className="h-1 w-32 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full opacity-0 transform scale-x-0 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}></div>
+              <div className="h-1 w-32 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full opacity-0 transform scale-x-0 animate-fade-in" style={{ animationDelay: '1.4s', animationFillMode: 'forwards' }}></div>
             </div>
             
             {/* Animated subtitle */}
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1.6s', animationFillMode: 'forwards' }}>
               Front-End Developer | UI/UX Designer | Food & Travel Enthusiast
             </p>
             
             {/* Animated location */}
-            <p className="text-lg text-gray-500 font-light opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
+            <p className="text-lg text-gray-500 font-light opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '1.8s', animationFillMode: 'forwards' }}>
               Crafting digital experiences with passion from Hyderabad, India
             </p>
             
-            {/* Improved buttons layout with better spacing and alignment */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 opacity-0 transform translate-y-8 animate-fade-in max-w-md mx-auto" style={{ animationDelay: '1.4s', animationFillMode: 'forwards' }}>
+            {/* Single button */}
+            <div className="flex justify-center opacity-0 transform translate-y-8 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('work')}
-                className="w-full sm:w-auto bg-gradient-to-r from-gray-900 to-black hover:from-black hover:to-gray-800 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-2xl group min-w-[200px]"
+                className="bg-gradient-to-r from-gray-900 to-black hover:from-black hover:to-gray-800 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-2xl group"
               >
                 <span className="flex items-center justify-center">
                   Explore My Work
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </span>
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => window.open('https://snrfoodler.com', '_blank')}
-                className="w-full sm:w-auto border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-xl min-w-[200px]"
-              >
-                <span className="flex items-center justify-center">
-                  Read My Blog
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </span>
-              </Button>
-            </div>
-            
-            {/* Enhanced floating CSS/HTML code animation */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
-              <div className="text-sm font-mono text-gray-400 animate-pulse bg-gray-50/50 px-4 py-2 rounded-lg backdrop-blur-sm">
-                &lt;div className="passionate-developer"&gt;creating magic&lt;/div&gt;
-              </div>
             </div>
           </div>
         </div>
+
+        <style jsx>{`
+          @keyframes slideUp {
+            from {
+              transform: translateY(100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+        `}</style>
       </section>
 
       {/* About Section */}
