@@ -178,7 +178,7 @@ const Index = () => {
   const mediaChannels = [
     {
       platform: "LinkedIn",
-      handle: "@snrdesigns",
+      handle: "@seelam-naveen",
       description: "Professional updates and industry insights",
       color: "from-blue-600 to-blue-700",
       link: "https://www.linkedin.com/in/seelam-naveen"
@@ -195,7 +195,7 @@ const Index = () => {
       handle: "@snr_foodler",
       description: "Food photography and travel stories",
       color: "from-purple-500 to-pink-500",
-      link: "https://www.instagram.com/snr_foodler/"
+      link: "https://www.instagram.com/snrfoodler/"
     },
     {
       platform: "YouTube",
