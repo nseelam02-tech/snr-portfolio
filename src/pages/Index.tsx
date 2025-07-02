@@ -65,11 +65,7 @@ const Index = () => {
   };
 
   const downloadResume = () => {
-    // Create a placeholder resume download
-    toast({
-      title: "Resume Download",
-      description: "Resume download will be available soon. Please contact me directly for now.",
-    });
+    window.open('https://drive.google.com/file/d/1uDzNvxKucwiZOcLzfmZkByKlHS8P92ru/view?usp=sharing', '_blank');
   };
 
   const blogPosts = [
@@ -133,7 +129,7 @@ const Index = () => {
       title: "Real-Time Financial Insights Dashboard",
       company: "FactSet (Offsite)",
       period: "Jan 2024 – April 2025 | Full Time",
-      role: "Frontend Developer",
+      role: "Software Engineer",
       description: "Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using Node.js APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.",
       technologies: ["React.js", "HTML", "CSS", "Node.js", "JavaScript", "API Integration", "Redux", "Material UI"],
       type: "development"
@@ -321,7 +317,7 @@ const Index = () => {
             
             {/* Animated subtitle */}
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light animate-slideUp" style={{ animationDelay: '1.6s' }}>
-              Front-End Developer | UI/UX Designer | Food & Travel Enthusiast
+              Software Engineer | UI/UX Designer | Food & Travel Enthusiast
             </p>
             
             {/* Animated location */}
