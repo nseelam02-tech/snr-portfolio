@@ -98,7 +98,7 @@ const Index = () => {
 
   const skills = [
     "HTML", "CSS", "JavaScript", "React", "TypeScript", "Node.js",
-    "UI/UX Design", "Figma", "Adobe XD", "Photoshop", "Responsive Design", "Git", "GitHub", "MySQL", "Tailwind CSS"
+    "UI/UX Design", "Figma", "Adobe XD", "Photoshop", "Responsive Design", "Git", "GitHub", "MySQL", "Tailwind CSS", "Material UI"
   ];
 
   const interests = [
@@ -135,7 +135,7 @@ const Index = () => {
       period: "Jan 2024 – April 2025 | Full Time",
       role: "Frontend Developer",
       description: "Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using Node.js APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.",
-      technologies: ["React.js", "HTML", "CSS", "Node.js", "JavaScript", "API Integration"],
+      technologies: ["React.js", "HTML", "CSS", "Node.js", "JavaScript", "API Integration", "Redux", "Material UI"],
       type: "development"
     },
     {
@@ -144,7 +144,7 @@ const Index = () => {
       period: "Sept 2021 - Nov 2023 | Full time", 
       role: "UI Developer",
       description: "An internal web interface for restaurant kitchen crews to track food quantities and requirements in real time using smart camera integration. This system helped streamline the food prep process. Developed modular, responsive React components and integrated Redux for state management with Redux Saga for handling side effects. Collaborated with designers and backend teams to ensure data accuracy and applied SCSS for custom styling.",
-      technologies: ["React.js", "HTML", "CSS", "Tailwind CSS", "JavaScript", "Redux", "Redux Saga"],
+      technologies: ["React.js", "HTML", "CSS", "Bootstrap", "JavaScript"],
       type: "development"
     }
   ];
