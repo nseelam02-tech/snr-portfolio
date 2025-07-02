@@ -65,7 +65,7 @@ const Index = () => {
   };
 
   const downloadResume = () => {
-    window.open('https://drive.google.com/file/d/1uDzNvxKucwiZOcLzfmZkByKlHS8P92ru/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1xQ_1FckwnsIizzzcpQgBVc5FHRP5YQDW/view?usp=sharing', '_blank');
   };
 
   const blogPosts = [
