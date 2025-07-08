@@ -1,4 +1,4 @@
-# Welcome to SNR-Portfoli Project
+# Welcome to SNR-Portfolio Project
 
 ## Project info
 
