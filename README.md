@@ -1,8 +1,9 @@
-# Welcome to your Lovable project
+# Welcome to SNR-Portfoli Project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/64785473-a3e0-4ca7-85eb-7438799683f3
+**URL**:snr-portfolio-swart.vercel.app
+
 
 ## How can I edit this code?
 
@@ -58,12 +59,48 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/64785473-a3e0-4ca7-85eb-7438799683f3) and click on Share -> Publish.
+Commit & push your latest changes to GitHub:
 
-## Can I connect a custom domain to my Lovable project?
+bash
+Copy
+Edit
+git add .
+git commit -m "Updated portfolio"
+git push origin main
+Deploy through Vercel:
+
+Visit vercel.com
+
+Sign in with your GitHub account
+
+Click “New Project”
+
+Select your GitHub repository (e.g., snr-portfolio)
+
+Click “Deploy”
+
+Update your vite.config.ts for production:
+
+If using a root domain or custom domain:
+
+ts
+Copy
+Edit
+base: '/',
+
+
+## Can I connect a custom domain 
 
 Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To connect a domain, Buy a domain from:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Namecheap
+
+GoDaddy
+
+Google Domains
+
+Go to Vercel Dashboard → Project → Settings → Domains
+
+Add your domain (e.g. snrportfolio.com) and follow the DNS setup instructions provided by Vercel.
