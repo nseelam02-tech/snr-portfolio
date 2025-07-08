@@ -88,8 +88,7 @@ const Index = () => {
 
   const downloadResume = () => {
     window.open(
-      'https://drive.google.com/file/d/1xQ_1FckwnsIizzzcpQgBVc5FHRP5YQDW/view?usp=sharing',
-      '_blank'
+      'https://drive.google.com/file/d/1KPEsrwDsUZnZat2j87shyOJLqV6XgRUq/view?usp=sharing'
     )
   }
 
