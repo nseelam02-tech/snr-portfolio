@@ -184,7 +184,7 @@ const Index = () => {
     {
       title: 'Real-Time Financial Insights Dashboard',
       company: 'FactSet (Offsite)',
-      period: 'Jan 2024 – April 2025 | Full Time',
+      period: 'Dec 2024 – Mar 2025 | Full Time',
       role: 'Software Engineer',
       description:
         'Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using Node.js APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.',
@@ -203,7 +203,7 @@ const Index = () => {
     {
       title: 'Chipotle (Mexican Grill Restaurant Interface)',
       company: 'PayodSoft Consulting Services (Offsite)',
-      period: 'Sept 2021 - Nov 2023 | Full time',
+      period: 'Jan 2021 - Dec 2023 | Full time',
       role: 'UI Developer',
       description:
         'An internal web interface for restaurant kitchen crews to track food quantities and requirements in real time using smart camera integration. This system helped streamline the food prep process. Developed modular, responsive React components and integrated Redux for state management with Redux Saga for handling side effects. Collaborated with designers and backend teams to ensure data accuracy and applied SCSS for custom styling.',
@@ -216,7 +216,7 @@ const Index = () => {
     {
       title: 'XpressEats – Rail Food Delivery App',
       company: 'Designers Academy (Offsite)',
-      period: 'Jan 2025 – Mar 2025 | As a trainee',
+      period: 'Jan 2025 – May 2025 | As a trainee',
       role: 'UX/UI Designer',
       description:
         'Designed an end-to-end mobile experience to solve real train travel food issues like hygiene, limited options, and lack of customisation. Created comprehensive user flows, wireframes, high-fidelity mockups, and conducted extensive usability testing to ensure seamless ordering and delivery experience.',
@@ -234,7 +234,7 @@ const Index = () => {
     {
       title: 'TNV Collection – Fashion E-commerce App',
       company: 'Designers Academy (Offsite)',
-      period: 'Jan 2025 – Mar 2025 | As a trainee',
+      period: 'Jan 2025 – May 2025 | As a trainee',
       role: 'UX/UI Designer',
       description:
         'Reimagined an existing fashion website into a mobile-first shopping experience tailored for a modern, style-conscious audience. Conducted comprehensive user research, defined personas, built user flows, and developed a clean, elegant UI with strong visual hierarchy and improved conversion rates.',
