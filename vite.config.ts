@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   console.log('VITE MODE:', mode)
 
   return {
-    base: mode === 'production' ? '/snr-portfolio/' : '/',
+    base: '/',
     server: {
       host: '::',
       port: 8080,
