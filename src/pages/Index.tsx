@@ -184,7 +184,7 @@ const Index = () => {
     {
       title: 'Real-Time Financial Insights Dashboard',
       company: 'FactSet (Offsite)',
-      period: 'Dec 2024 – Mar 2025 | Full Time',
+      period: 'Dec 2023 - Mar 2025 | Full Time',
       role: 'Software Engineer',
       description:
         'Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using Node.js APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.',
