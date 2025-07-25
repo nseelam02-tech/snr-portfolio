@@ -202,8 +202,8 @@ const Index = () => {
     },
     {
       title: 'Chipotle (Mexican Grill Restaurant Interface)',
-      company: 'PayodSoft Consulting Services (Offsite)',
-      period: 'Jan 2021 - Dec 2023 | Full time',
+      company: 'Likedin Services Private Limited',
+      period: 'Feb 2020 - Dec 2023 | Full time',
       role: 'UI Developer',
       description:
         'An internal web interface for restaurant kitchen crews to track food quantities and requirements in real time using smart camera integration. This system helped streamline the food prep process. Developed modular, responsive React components and integrated Redux for state management with Redux Saga for handling side effects. Collaborated with designers and backend teams to ensure data accuracy and applied SCSS for custom styling.',
