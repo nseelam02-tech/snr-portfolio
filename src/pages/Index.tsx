@@ -88,7 +88,7 @@ const Index = () => {
 
   const downloadResume = () => {
     window.open(
-      'https://drive.google.com/file/d/1KPEsrwDsUZnZat2j87shyOJLqV6XgRUq/view?usp=sharing'
+      'https://drive.google.com/file/d/1QG8TxsJ4VkrocwqMiyc345jfocrDvAHz/view?usp=sharing'
     )
   }
 
@@ -183,7 +183,7 @@ const Index = () => {
   const professionalWork = [
     {
       title: 'Real-Time Financial Insights Dashboard',
-      company: 'FactSet (Offsite)',
+      company: 'FactSet Systems India Private Limited',
       period: 'Dec 2023 - Mar 2025 | Full Time',
       role: 'Software Engineer',
       description:
