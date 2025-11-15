@@ -339,7 +339,7 @@ const Index = () => {
                 variant="outline"
                 size="sm"
                 onClick={downloadResume}
-                className="bg-black text-white hover:bg-gray-900 border-black transition-all duration-200 hover:scale-105 font-medium shadow-lg"
+                className="bg-black text-white hover:bg-gray-900 border-black transition-all duration-200 hover:text-white hover:scale-105 font-medium shadow-lg"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Resume
