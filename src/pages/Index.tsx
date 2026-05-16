@@ -37,7 +37,7 @@ const Index = () => {
   const { toast } = useToast()
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -48,7 +48,6 @@ const Index = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: 'Validation Error',
@@ -58,7 +57,6 @@ const Index = () => {
       return
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(formData.email)) {
       toast({
@@ -74,7 +72,6 @@ const Index = () => {
       description: "Thank you for reaching out. I'll get back to you soon.",
     })
 
-    // Reset form
     setFormData({ name: '', email: '', message: '' })
   }
 
@@ -88,7 +85,7 @@ const Index = () => {
 
   const downloadResume = () => {
     window.open(
-      'https://drive.google.com/file/d/1QG8TxsJ4VkrocwqMiyc345jfocrDvAHz/view?usp=sharing'
+      'https://drive.google.com/file/d/1qSSQqKImkfNYht4BIIR2INZ6s_QVwjX1/view?usp=sharing',
     )
   }
 
@@ -119,23 +116,29 @@ const Index = () => {
     },
   ]
 
+  // ✅ UPDATED: Skills aligned with resume
   const skills = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
+    'React.js',
     'TypeScript',
+    'JavaScript (ES6+)',
+    'Vite',
+    'Redux',
+    'Redux-Saga',
+    'SCSS',
+    'HTML5',
+    'CSS3',
+    'Azure DevOps',
+    'PWA',
+    'Application Insights',
+    'SonarQube',
+    'Accessibility (WCAG)',
+    'API Wrapper Architecture',
+    'Material UI',
+    'Jest',
     'Node.js',
-    'UI/UX Design',
-    'Figma',
-    'Adobe XD',
-    'Photoshop',
     'Responsive Design',
     'Git',
-    'GitHub',
-    'MySQL',
-    'Tailwind CSS',
-    'Material UI',
+    'Figma',
   ]
 
   const interests = [
@@ -180,10 +183,50 @@ const Index = () => {
     },
   ]
 
+  // ✅ UPDATED: WinWire projects added at top, existing projects kept below
   const professionalWork = [
     {
+      title: 'WT Time & Attendance System',
+      company: 'WinWire Technologies Inc.',
+      period: 'Mar 2026 - Present | Full Time',
+      role: 'Senior Software Design Engineer',
+      description:
+        'Developing scalable enterprise Time & Attendance applications for Whiting-Turner Construction Company using React.js, TypeScript, and Vite. Built reusable frontend architecture, API wrapper integration, Progressive Web Application (PWA) implementation, Azure Static Web App deployment configuration, Application Insights telemetry integration, SonarQube validation, and responsive enterprise UI development within Agile/Scrum environments.',
+      technologies: [
+        'React.js',
+        'TypeScript',
+        'Vite',
+        'SCSS',
+        'Azure DevOps',
+        'PWA',
+        'Application Insights',
+        'SonarQube',
+        'API Wrapper Architecture',
+      ],
+      type: 'development',
+    },
+    {
+      title: 'Relativity Accessibility & Compliance Project',
+      company: 'WinWire Technologies Inc.',
+      period: 'Oct 2025 - Feb 2026 | Full Time',
+      role: 'Senior Software Design Engineer',
+      description:
+        'Worked on enterprise accessibility and compliance modernization projects using React.js and TypeScript. Implemented accessibility enhancements including ARIA roles, keyboard navigation, screen reader support, reusable component improvements, Jest testing, and WCAG compliance fixes for large-scale enterprise applications.',
+      technologies: [
+        'React.js',
+        'TypeScript',
+        'Aurelia',
+        'SCSS',
+        'Jest',
+        'Accessibility (WCAG)',
+        'HTML5',
+        'CSS3',
+      ],
+      type: 'development',
+    },
+    {
       title: 'Real-Time Financial Insights Dashboard',
-      company: 'FactSet Systems India Private Limited',
+      company: 'Factet Private Limited, Hyderabad',
       period: 'Dec 2023 - Mar 2025 | Full Time',
       role: 'Software Engineer',
       description:
@@ -291,7 +334,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
-      {/* Enhanced Navigation with glassmorphism effect */}
+      {/* Navigation - UNCHANGED */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-xl z-50 border-b border-gray-100/50 transition-all duration-300 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
@@ -303,7 +346,6 @@ const Index = () => {
               />
             </div>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection('about')}
@@ -346,7 +388,6 @@ const Index = () => {
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               className="md:hidden transform hover:scale-110 transition-transform duration-200"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -355,7 +396,6 @@ const Index = () => {
             </button>
           </div>
 
-          {/* Mobile Navigation */}
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 pb-4 border-t border-gray-100 animate-fade-in">
               <div className="flex flex-col space-y-4 pt-4">
@@ -404,11 +444,9 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Enhanced Hero Section with sophisticated gradient background */}
+      {/* Hero Section - UNCHANGED UI, subtitle & tagline text updated */}
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30 pt-20 relative overflow-hidden">
-        {/* Enhanced Creative Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Refined floating code elements */}
           <div className="absolute top-20 left-10 text-6xl font-mono text-slate-200/40 animate-pulse opacity-20 select-none">
             {'</>'}
           </div>
@@ -430,8 +468,6 @@ const Index = () => {
           >
             {'function()'}
           </div>
-
-          {/* Refined geometric shapes */}
           <div
             className="absolute top-32 right-10 w-20 h-20 border-2 border-blue-300/30 rotate-45 animate-spin opacity-20"
             style={{ animationDuration: '20s' }}
@@ -444,21 +480,16 @@ const Index = () => {
             className="absolute top-1/2 right-32 w-12 h-12 border-2 border-slate-300/40 animate-pulse opacity-25"
             style={{ animationDelay: '2s' }}
           ></div>
-
-          {/* Sophisticated gradient orbs */}
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100/30 to-indigo-100/30 rounded-full opacity-40 animate-pulse blur-3xl"></div>
           <div
             className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-slate-100/30 to-blue-100/30 rounded-full opacity-40 animate-pulse blur-3xl"
             style={{ animationDelay: '1s' }}
           ></div>
-
-          {/* Grid pattern overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-[0.03]"></div>
         </div>
 
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           <div className="space-y-12">
-            {/* Enhanced animated title with designerrs.com style animation */}
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl font-thin tracking-tight text-gray-900">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 min-h-[80px] md:min-h-[100px]">
@@ -494,23 +525,25 @@ const Index = () => {
               ></div>
             </div>
 
-            {/* Animated subtitle */}
+            {/* ✅ UPDATED subtitle */}
             <p
               className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light animate-slideUp"
               style={{ animationDelay: '1.6s' }}
             >
-              Software Engineer | UI/UX Designer | Food & Travel Enthusiast
+              Senior Software Design Engineer | React.js | TypeScript | Azure
+              DevOps
             </p>
 
-            {/* Animated location */}
+            {/* ✅ UPDATED tagline */}
             <p
               className="text-lg text-gray-500 font-light animate-slideUp"
               style={{ animationDelay: '1.8s' }}
             >
-              Crafting digital experiences with passion from Hyderabad, India
+              Building scalable enterprise web applications with React.js, Vite,
+              PWA, Accessibility & Modern Frontend Architecture — from
+              Hyderabad, India
             </p>
 
-            {/* Single button */}
             <div
               className="flex justify-center animate-slideUp"
               style={{ animationDelay: '2s' }}
@@ -531,33 +564,18 @@ const Index = () => {
 
         <style>{`
           @keyframes slideUp {
-            from {
-              transform: translateY(100%);
-              opacity: 0;
-            }
-            to {
-              transform: translateY(0);
-              opacity: 1;
-            }
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
           }
-
           @keyframes scaleX {
-            from {
-              transform: scaleX(0);
-              opacity: 0;
-            }
-            to {
-              transform: scaleX(1);
-              opacity: 1;
-            }
+            from { transform: scaleX(0); opacity: 0; }
+            to { transform: scaleX(1); opacity: 1; }
           }
-
           .animate-slideUp {
             animation: slideUp 1s ease-out forwards;
             opacity: 0;
             transform: translateY(100%);
           }
-
           .animate-scaleX {
             animation: scaleX 1s ease-out forwards;
             opacity: 0;
@@ -566,7 +584,7 @@ const Index = () => {
         `}</style>
       </section>
 
-      {/* About Section with clean gradient background */}
+      {/* About Section - UNCHANGED UI, text updated */}
       <section
         id="about"
         className="py-32 bg-gradient-to-b from-white to-slate-50/50"
@@ -577,30 +595,35 @@ const Index = () => {
               <h2 className="text-4xl md:text-5xl font-thin mb-10 tracking-tight text-gray-900">
                 About Me
               </h2>
+              {/* ✅ UPDATED about text */}
               <p className="text-lg text-gray-600 leading-relaxed mb-8 font-light">
-                I'm Seelam Naveen Reddy, a passionate Front-End Developer and
-                UI/UX Designer with expertise in creating seamless digital
-                experiences. With a strong foundation in modern web technologies
-                and design principles, I specialize in building responsive,
-                user-centric applications that bridge functionality with
-                aesthetic appeal.
+                I'm a Senior Software Design Engineer with 6+ years of
+                experience building scalable, responsive, and enterprise-grade
+                web applications using React.js, TypeScript, JavaScript (ES6+),
+                Redux, SCSS, and Vite.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8 font-light">
-                My professional journey spans developing scalable React
-                applications, crafting intuitive user interfaces, and
-                implementing design systems that enhance user engagement. I'm
-                proficient in JavaScript, TypeScript, React, Node.js, and modern
-                CSS frameworks, with a keen eye for detail in both code quality
-                and visual design.
+                Currently working at WinWire Technologies on enterprise
+                applications for clients including Whiting-Turner Construction
+                Company, focusing on frontend architecture, accessibility
+                compliance, Progressive Web Applications (PWA), Azure DevOps
+                workflows, telemetry integration, and scalable UI development.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8 font-light">
+                I specialize in reusable component architecture, API wrapper
+                integration patterns, performance optimization, responsive UI
+                development, and modern frontend engineering practices. My
+                recent work includes Azure Static Web App deployment
+                configurations, Application Insights telemetry integration,
+                SonarQube code quality workflows, and WCAG accessibility
+                compliance enhancements.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-10 font-light">
-                Beyond technology, I'm the creator of SNR FoodleR, a food and
-                travel blog where I share my culinary adventures and cultural
-                discoveries. This passion project showcases my content creation
-                skills and reflects my belief that great experiences—whether
-                digital or culinary—require the same attention to craftsmanship
-                and user experience.
+                Beyond engineering, I'm the creator of SNR FoodleR — a food and
+                travel blog where I share culinary adventures and cultural
+                discoveries from Hyderabad and beyond.
               </p>
+              {/* ✅ UPDATED skills badges */}
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <Badge
@@ -617,7 +640,7 @@ const Index = () => {
               <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <img
                   src="/SNR-uploads/86161906-31db-46ef-b3c1-7f545b4563a9.png"
-                  alt="Seelam Naveen Reddy - Front-End Developer"
+                  alt="Seelam Naveen Reddy - Senior Software Design Engineer"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -626,145 +649,147 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Work Section with sophisticated background */}
+      {/* Work Section - UNCHANGED UI, data updated (WinWire added at top) */}
       <section
         id="work"
         className="py-32 bg-gradient-to-br from-slate-50/80 via-gray-50 to-blue-50/20 relative"
       >
-        {/* Subtle background pattern */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)] opacity-30"></div>
         <div className="relative z-10">
-          {/* Professional Experience */}
           <div className="mb-20">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-thin mb-8 tracking-tight text-gray-900">
                 Professional Experience
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light">
-                Showcasing my expertise in modern web development and full-stack
-                solutions
+                Showcasing my expertise in modern web development and enterprise
+                frontend engineering
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-10">
-              {professionalWork.map((project, index) => (
-                <Card
-                  key={index}
-                  className="group hover:shadow-xl transition-all duration-300 animate-fade-in border-0 shadow-lg bg-white rounded-2xl overflow-hidden transform hover:scale-105"
-                >
-                  <CardHeader className="p-8">
-                    <div className="flex items-start justify-between mb-4">
-                      <Badge
-                        variant="outline"
-                        className="mb-2 bg-blue-50 text-blue-700 border-blue-200 font-medium"
-                      >
-                        {project.role}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl font-medium text-gray-900 mb-2">
-                      {project.title}
-                    </CardTitle>
-                    <div className="text-sm text-gray-600 mb-4">
-                      <div className="font-medium">{project.company}</div>
-                      <div className="text-gray-500">{project.period}</div>
-                    </div>
-                    <CardDescription className="text-base leading-relaxed text-gray-600 font-light">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="p-8 pt-0">
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="grid md:grid-cols-2 gap-10">
+                {professionalWork.map((project, index) => (
+                  <Card
+                    key={index}
+                    className="group hover:shadow-xl transition-all duration-300 animate-fade-in border-0 shadow-lg bg-white rounded-2xl overflow-hidden transform hover:scale-105"
+                  >
+                    <CardHeader className="p-8">
+                      <div className="flex items-start justify-between mb-4">
                         <Badge
-                          key={techIndex}
-                          variant="secondary"
-                          className="text-xs bg-gray-100 text-gray-700"
+                          variant="outline"
+                          className="mb-2 bg-blue-50 text-blue-700 border-blue-200 font-medium"
                         >
-                          {tech}
+                          {project.role}
                         </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                      </div>
+                      <CardTitle className="text-xl font-medium text-gray-900 mb-2">
+                        {project.title}
+                      </CardTitle>
+                      <div className="text-sm text-gray-600 mb-4">
+                        <div className="font-medium">{project.company}</div>
+                        <div className="text-gray-500">{project.period}</div>
+                      </div>
+                      <CardDescription className="text-base leading-relaxed text-gray-600 font-light">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-8 pt-0">
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <Badge
+                            key={techIndex}
+                            variant="secondary"
+                            className="text-xs bg-gray-100 text-gray-700"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* UI/UX Design Training */}
+          {/* UI/UX Design Training - UNCHANGED */}
           <div>
             <h3 className="text-3xl font-light mb-12 text-center text-gray-800">
               UI/UX Design Training Projects
             </h3>
-            <div className="grid md:grid-cols-2 gap-10">
-              {designTraining.map((project, index) => (
-                <Card
-                  key={index}
-                  className="group hover:shadow-xl transition-all duration-300 animate-fade-in border-0 shadow-lg bg-white rounded-2xl overflow-hidden transform hover:scale-105"
-                >
-                  <CardHeader className="p-8">
-                    <div className="flex items-start justify-between mb-4">
-                      <Badge
-                        variant="outline"
-                        className="mb-2 bg-purple-50 text-purple-700 border-purple-200 font-medium"
-                      >
-                        {project.role}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl font-medium text-gray-900 mb-2">
-                      {project.title}
-                    </CardTitle>
-                    <div className="text-sm text-gray-600 mb-4">
-                      <div className="font-medium">{project.company}</div>
-                      <div className="text-gray-500">{project.period}</div>
-                    </div>
-                    <CardDescription className="text-base leading-relaxed text-gray-600 font-light">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="p-8 pt-0">
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {project.technologies.map((tech, techIndex) => (
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="grid md:grid-cols-2 gap-10">
+                {designTraining.map((project, index) => (
+                  <Card
+                    key={index}
+                    className="group hover:shadow-xl transition-all duration-300 animate-fade-in border-0 shadow-lg bg-white rounded-2xl overflow-hidden transform hover:scale-105"
+                  >
+                    <CardHeader className="p-8">
+                      <div className="flex items-start justify-between mb-4">
                         <Badge
-                          key={techIndex}
-                          variant="secondary"
-                          className="text-xs bg-gray-100 text-gray-700"
+                          variant="outline"
+                          className="mb-2 bg-purple-50 text-purple-700 border-purple-200 font-medium"
                         >
-                          {tech}
+                          {project.role}
                         </Badge>
-                      ))}
-                    </div>
-                    <div className="flex gap-4">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() =>
-                          window.open(project.behanceLink, '_blank')
-                        }
-                        className="rounded-full hover:scale-105 transition-transform duration-200"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Behance
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() =>
-                          window.open(project.mediumLink, '_blank')
-                        }
-                        className="rounded-full hover:scale-105 transition-transform duration-200"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Medium
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                      </div>
+                      <CardTitle className="text-xl font-medium text-gray-900 mb-2">
+                        {project.title}
+                      </CardTitle>
+                      <div className="text-sm text-gray-600 mb-4">
+                        <div className="font-medium">{project.company}</div>
+                        <div className="text-gray-500">{project.period}</div>
+                      </div>
+                      <CardDescription className="text-base leading-relaxed text-gray-600 font-light">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-8 pt-0">
+                      <div className="flex flex-wrap gap-2 mb-8">
+                        {project.technologies.map((tech, techIndex) => (
+                          <Badge
+                            key={techIndex}
+                            variant="secondary"
+                            className="text-xs bg-gray-100 text-gray-700"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                      <div className="flex gap-4">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() =>
+                            window.open(project.behanceLink, '_blank')
+                          }
+                          className="rounded-full hover:scale-105 transition-transform duration-200"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Behance
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() =>
+                            window.open(project.mediumLink, '_blank')
+                          }
+                          className="rounded-full hover:scale-105 transition-transform duration-200"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Medium
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Enhanced Interests Section with warm gradient */}
+      {/* Interests Section - COMPLETELY UNCHANGED */}
       <section
         id="interests"
         className="py-32 bg-gradient-to-br from-white via-slate-50/30 to-indigo-50/20"
@@ -812,12 +837,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Blog Section with refined background */}
+      {/* Blog Section - COMPLETELY UNCHANGED */}
       <section
         id="blog"
         className="py-32 bg-gradient-to-br from-slate-50/60 via-gray-50/80 to-blue-50/30 relative"
       >
-        {/* Dot pattern overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(71,85,105,0.15)_1px,transparent_0)] bg-[length:32px_32px] opacity-20"></div>
         <div className="relative z-10">
           <div className="max-w-7xl mx-auto px-6">
@@ -877,7 +901,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Media Section with clean background */}
+      {/* Media Section - COMPLETELY UNCHANGED */}
       <section className="py-32 bg-gradient-to-b from-white to-slate-50/40">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
@@ -924,12 +948,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Contact Section with sophisticated styling */}
+      {/* Contact Section - COMPLETELY UNCHANGED */}
       <section
         id="contact"
         className="py-32 bg-gradient-to-br from-slate-50/70 via-gray-50 to-blue-50/20 relative"
       >
-        {/* Refined background elements */}
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.02)_50%,transparent_75%)] bg-[length:60px_60px] opacity-50"></div>
         <div className="relative z-10">
           <div className="max-w-6xl mx-auto px-6">
@@ -1046,7 +1069,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Footer with clean styling */}
+      {/* Footer - COMPLETELY UNCHANGED */}
       <footer className="py-16 bg-gradient-to-t from-white to-slate-50/50 border-t border-slate-200/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
@@ -1058,7 +1081,7 @@ const Index = () => {
               />
             </div>
             <div className="text-gray-600 text-center md:text-left font-light">
-              © 2024 Seelam Naveen Reddy. Crafted with passion for technology
+              © 2026 Seelam Naveen Reddy. Crafted with passion for technology
               and culture.
             </div>
           </div>
