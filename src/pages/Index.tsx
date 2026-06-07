@@ -85,7 +85,7 @@ const Index = () => {
 
   const downloadResume = () => {
     window.open(
-      'https://drive.google.com/file/d/1p_rkAYe3rbzC3TpWhJlg0lzjjL4aEcnA/view?usp=sharing',
+      'https://drive.google.com/file/d/1EnBjVODjkn0SvFtccLyn3WflHUc-D5b2/view?usp=sharing',
     )
   }
 
@@ -135,7 +135,7 @@ const Index = () => {
     'API Wrapper Architecture',
     'Material UI',
     'Jest',
-    'python',
+    'Node.js',
     'Responsive Design',
     'Git',
     'Figma',
@@ -235,7 +235,7 @@ const Index = () => {
         'React.js',
         'HTML',
         'CSS',
-        'python',
+        'Node.js',
         'JavaScript',
         'API Integration[REST]',
         'Redux',
@@ -530,8 +530,8 @@ const Index = () => {
               className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light animate-slideUp"
               style={{ animationDelay: '1.6s' }}
             >
-              Senior Software Design Engineer | React.js | TypeScript | python |
-              Azure DevOps
+              Senior Software Design Engineer | React.js | TypeScript | Node.js
+              | Azure DevOps
             </p>
 
             {/* ✅ UPDATED tagline */}
