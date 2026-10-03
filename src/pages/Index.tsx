@@ -530,7 +530,7 @@ const Index = () => {
               className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light animate-slideUp"
               style={{ animationDelay: '1.6s' }}
             >
-              Senior Software Design Engineer | React.js | TypeScript | Node.js
+              Senior Software Design Engineer | React |JavaScript | TypeScript | Next.js | Node.js
               | Azure DevOps
             </p>
 
