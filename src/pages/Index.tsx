@@ -85,7 +85,7 @@ const Index = () => {
 
   const downloadResume = () => {
     window.open(
-      'https://drive.google.com/file/d/1qSSQqKImkfNYht4BIIR2INZ6s_QVwjX1/view?usp=sharing',
+      'https://drive.google.com/file/d/1EnBjVODjkn0SvFtccLyn3WflHUc-D5b2/view?usp=sharing',
     )
   }
 
@@ -178,7 +178,7 @@ const Index = () => {
     {
       category: 'Creative',
       icon: <Camera className="w-8 h-8" />,
-      items: ['Content Creation', 'Video Editing', 'Digital Art', 'Blogging'],
+      items: ['Content Creation', 'Video Editing', 'Digital Art', 'Vlogging'],
       color: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
     },
   ]
@@ -230,7 +230,7 @@ const Index = () => {
       period: 'Dec 2023 - Mar 2025 | Full Time',
       role: 'Software Engineer',
       description:
-        'Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using Node.js APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.',
+        'Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.',
       technologies: [
         'React.js',
         'HTML',
@@ -530,8 +530,8 @@ const Index = () => {
               className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light animate-slideUp"
               style={{ animationDelay: '1.6s' }}
             >
-              Senior Software Design Engineer | React.js | TypeScript | Azure
-              DevOps
+              Senior Software Design Engineer | React.js | TypeScript | Node.js
+              | Azure DevOps
             </p>
 
             {/* ✅ UPDATED tagline */}
@@ -833,70 +833,6 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section - COMPLETELY UNCHANGED */}
-      <section
-        id="blog"
-        className="py-32 bg-gradient-to-br from-slate-50/60 via-gray-50/80 to-blue-50/30 relative"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(71,85,105,0.15)_1px,transparent_0)] bg-[length:32px_32px] opacity-20"></div>
-        <div className="relative z-10">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-thin mb-8 tracking-tight text-gray-900">
-                SNR FoodleR Blog
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-                Exploring the world through food, culture, and travel stories.
-                Join me on a culinary journey that celebrates the art of cooking
-                and the joy of discovery.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-10">
-              {blogPosts.map((post, index) => (
-                <Card
-                  key={index}
-                  className="group hover:shadow-xl transition-all duration-500 animate-fade-in border-0 shadow-lg overflow-hidden rounded-2xl bg-white transform hover:scale-105"
-                >
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <CardHeader className="p-8">
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4 font-light">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        {post.date}
-                      </div>
-                      <span>{post.readTime}</span>
-                    </div>
-                    <CardTitle className="text-xl font-medium line-clamp-2 text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-200">
-                      {post.title}
-                    </CardTitle>
-                    <CardDescription className="text-base leading-relaxed text-gray-600 font-light">
-                      {post.excerpt}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => window.open('https://snrfoodler.com', '_blank')}
-                className="border-black text-black hover:bg-black hover:text-white px-8 py-4 rounded-full font-medium transition-all duration-200 hover:scale-105 transform"
-              >
-                Visit Full Blog
-                <ExternalLink className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
           </div>
         </div>
       </section>
