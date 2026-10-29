@@ -310,13 +310,6 @@ const Index = () => {
       link: 'https://www.linkedin.com/in/seelam-naveen',
     },
     {
-      platform: 'Twitter',
-      handle: '@SNR_Foodler',
-      description: 'Quick thoughts and daily updates',
-      color: 'from-gray-800 to-black',
-      link: 'https://twitter.com/SNR_Foodler',
-    },
-    {
       platform: 'Instagram',
       handle: '@snr_foodler',
       description: 'Food photography and travel stories',
