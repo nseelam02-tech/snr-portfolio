@@ -84,5 +84,9 @@
     "typescript-eslint": "^8.0.1",
     "vite": "^7.0.3",
     "webpack-cli": "^6.0.1"
+  },
+  "allowScripts": {
+    "@swc/core@1.12.11": true,
+    "esbuild@0.25.6": true
   }
 }
