@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Badge } from '@/components/ui/badge'
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
   ExternalLink,
@@ -24,17 +24,17 @@ import {
   Camera,
   Code,
   Plane,
-} from 'lucide-react'
-import { useToast } from '@/hooks/use-toast'
+} from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { toast } = useToast()
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { toast } = useToast();
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -42,288 +42,288 @@ const Index = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: 'Validation Error',
-        description: 'Please fill in all required fields.',
-        variant: 'destructive',
-      })
-      return
+        title: "Validation Error",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       toast({
-        title: 'Invalid Email',
-        description: 'Please enter a valid email address.',
-        variant: 'destructive',
-      })
-      return
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
     }
 
     toast({
-      title: 'Message Sent!',
+      title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
-    })
+    });
 
-    setFormData({ name: '', email: '', message: '' })
-  }
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   const downloadResume = () => {
     window.open(
-      'https://drive.google.com/file/d/1EnBjVODjkn0SvFtccLyn3WflHUc-D5b2/view?usp=sharing',
-    )
-  }
+      "https://drive.google.com/file/d/1EnBjVODjkn0SvFtccLyn3WflHUc-D5b2/view?usp=sharing",
+    );
+  };
 
   const blogPosts = [
     {
-      title: 'The Best Ever Fish Curry',
+      title: "The Best Ever Fish Curry",
       excerpt:
-        'A traditional coastal recipe passed down through generations, bringing authentic flavors and aromatic spices to your kitchen...',
-      image: '/SNR-uploads/c1a06e2b-5481-476d-9bf6-b4fa1db8e6e3.png',
-      date: 'March 15, 2024',
-      readTime: '8 min read',
+        "A traditional coastal recipe passed down through generations, bringing authentic flavors and aromatic spices to your kitchen...",
+      image: "/SNR-uploads/c1a06e2b-5481-476d-9bf6-b4fa1db8e6e3.png",
+      date: "March 15, 2024",
+      readTime: "8 min read",
     },
     {
-      title: '7 Cup Burfi | Seven Cups Sweet Recipe',
+      title: "7 Cup Burfi | Seven Cups Sweet Recipe",
       excerpt:
-        'Learn to make this classic Indian sweet that melts in your mouth with just seven simple ingredients and traditional cooking methods...',
-      image: '/SNR-uploads/2ebfd292-a648-4106-8113-e385a115024f.png',
-      date: 'March 10, 2024',
-      readTime: '6 min read',
+        "Learn to make this classic Indian sweet that melts in your mouth with just seven simple ingredients and traditional cooking methods...",
+      image: "/SNR-uploads/2ebfd292-a648-4106-8113-e385a115024f.png",
+      date: "March 10, 2024",
+      readTime: "6 min read",
     },
     {
-      title: 'Mastering the Art of Italian Pizza Dough',
+      title: "Mastering the Art of Italian Pizza Dough",
       excerpt:
-        'Discover the secrets behind creating the perfect pizza dough that rivals authentic Italian pizzerias with traditional techniques and modern tips...',
-      image: '/SNR-uploads/a0d3e689-310f-4a3c-a5d0-15fbc6039e15.png',
-      date: 'March 5, 2024',
-      readTime: '5 min read',
+        "Discover the secrets behind creating the perfect pizza dough that rivals authentic Italian pizzerias with traditional techniques and modern tips...",
+      image: "/SNR-uploads/a0d3e689-310f-4a3c-a5d0-15fbc6039e15.png",
+      date: "March 5, 2024",
+      readTime: "5 min read",
     },
-  ]
+  ];
 
   // ✅ UPDATED: Skills aligned with resume
   const skills = [
-    'React.js',
-    'TypeScript',
-    'JavaScript (ES6+)',
-    'Vite',
-    'Redux',
-    'Redux-Saga',
-    'SCSS',
-    'HTML5',
-    'CSS3',
-    'Azure DevOps',
-    'PWA',
-    'Application Insights',
-    'SonarQube',
-    'Accessibility (WCAG)',
-    'API Wrapper Architecture',
-    'Material UI',
-    'Jest',
-    'Node.js',
-    'Responsive Design',
-    'Git',
-    'Figma',
-  ]
+    "React.js",
+    "TypeScript",
+    "JavaScript (ES6+)",
+    "Vite",
+    "Redux",
+    "Redux-Saga",
+    "SCSS",
+    "HTML5",
+    "CSS3",
+    "Azure DevOps",
+    "PWA",
+    "Application Insights",
+    "SonarQube",
+    "Accessibility (WCAG)",
+    "API Wrapper Architecture",
+    "Material UI",
+    "Jest",
+    "Node.js",
+    "Responsive Design",
+    "Git",
+    "Figma",
+  ];
 
   const interests = [
     {
-      category: 'Food',
+      category: "Food",
       icon: <Heart className="w-8 h-8" />,
       items: [
-        'Recipe Development',
-        'Food Photography',
-        'Culinary Traditions',
-        'Restaurant Reviews',
+        "Recipe Development",
+        "Food Photography",
+        "Culinary Traditions",
+        "Restaurant Reviews",
       ],
-      color: 'bg-red-50 border-red-200 hover:bg-red-100',
+      color: "bg-red-50 border-red-200 hover:bg-red-100",
     },
     {
-      category: 'Travel',
+      category: "Travel",
       icon: <Plane className="w-8 h-8" />,
       items: [
-        'Cultural Exploration',
-        'Local Cuisines',
-        'Travel Photography',
-        'Adventure Planning',
+        "Cultural Exploration",
+        "Local Cuisines",
+        "Travel Photography",
+        "Adventure Planning",
       ],
-      color: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
+      color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
     },
     {
-      category: 'Technology',
+      category: "Technology",
       icon: <Code className="w-8 h-8" />,
       items: [
-        'Web Development',
-        'Design Systems',
-        'UX Research',
-        'Mobile Apps',
+        "Web Development",
+        "Design Systems",
+        "UX Research",
+        "Mobile Apps",
       ],
-      color: 'bg-green-50 border-green-200 hover:bg-green-100',
+      color: "bg-green-50 border-green-200 hover:bg-green-100",
     },
     {
-      category: 'Creative',
+      category: "Creative",
       icon: <Camera className="w-8 h-8" />,
-      items: ['Content Creation', 'Video Editing', 'Digital Art', 'Vlogging'],
-      color: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
+      items: ["Content Creation", "Video Editing", "Digital Art", "Vlogging"],
+      color: "bg-purple-50 border-purple-200 hover:bg-purple-100",
     },
-  ]
+  ];
 
   // ✅ UPDATED: WinWire projects added at top, existing projects kept below
   const professionalWork = [
     {
-      title: 'WT Time & Attendance System',
-      company: 'WinWire Technologies Inc.',
-      period: 'Mar 2026 - Present | Full Time',
-      role: 'Senior Software Design Engineer',
+      title: "WT Time & Attendance System",
+      company: "WinWire Technologies Inc.",
+      period: "Mar 2026 - Present | Full Time",
+      role: "Senior Software Design Engineer",
       description:
-        'Developing scalable enterprise Time & Attendance applications for Whiting-Turner Construction Company using React.js, TypeScript, and Vite. Built reusable frontend architecture, API wrapper integration, Progressive Web Application (PWA) implementation, Azure Static Web App deployment configuration, Application Insights telemetry integration, SonarQube validation, and responsive enterprise UI development within Agile/Scrum environments.',
+        "Developing scalable enterprise Time & Attendance applications for Whiting-Turner Construction Company using React.js, TypeScript, and Vite. Built reusable frontend architecture, API wrapper integration, Progressive Web Application (PWA) implementation, Azure Static Web App deployment configuration, Application Insights telemetry integration, SonarQube validation, and responsive enterprise UI development within Agile/Scrum environments.",
       technologies: [
-        'React.js',
-        'TypeScript',
-        'Vite',
-        'SCSS',
-        'Azure DevOps',
-        'PWA',
-        'Application Insights',
-        'SonarQube',
-        'API Wrapper Architecture',
+        "React.js",
+        "TypeScript",
+        "Vite",
+        "SCSS",
+        "Azure DevOps",
+        "PWA",
+        "Application Insights",
+        "SonarQube",
+        "API Wrapper Architecture",
       ],
-      type: 'development',
+      type: "development",
     },
     {
-      title: 'Relativity Accessibility & Compliance Project',
-      company: 'WinWire Technologies Inc.',
-      period: 'Oct 2025 - Feb 2026 | Full Time',
-      role: 'Senior Software Design Engineer',
+      title: "Relativity Accessibility & Compliance Project",
+      company: "WinWire Technologies Inc.",
+      period: "Oct 2025 - Feb 2026 | Full Time",
+      role: "Senior Software Design Engineer",
       description:
-        'Worked on enterprise accessibility and compliance modernization projects using React.js and TypeScript. Implemented accessibility enhancements including ARIA roles, keyboard navigation, screen reader support, reusable component improvements, Jest testing, and WCAG compliance fixes for large-scale enterprise applications.',
+        "Worked on enterprise accessibility and compliance modernization projects using React.js and TypeScript. Implemented accessibility enhancements including ARIA roles, keyboard navigation, screen reader support, reusable component improvements, Jest testing, and WCAG compliance fixes for large-scale enterprise applications.",
       technologies: [
-        'React.js',
-        'TypeScript',
-        'Aurelia',
-        'SCSS',
-        'Jest',
-        'Accessibility (WCAG)',
-        'HTML5',
-        'CSS3',
+        "React.js",
+        "TypeScript",
+        "Aurelia",
+        "SCSS",
+        "Jest",
+        "Accessibility (WCAG)",
+        "HTML5",
+        "CSS3",
       ],
-      type: 'development',
+      type: "development",
     },
     {
-      title: 'Real-Time Financial Insights Dashboard',
-      company: 'Factet Private Limited, Hyderabad',
-      period: 'Dec 2023 - Mar 2025 | Full Time',
-      role: 'Software Engineer',
+      title: "Real-Time Financial Insights Dashboard",
+      company: "Factet Private Limited, Hyderabad",
+      period: "Dec 2023 - Mar 2025 | Full Time",
+      role: "Software Engineer",
       description:
-        'Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.',
+        "Developed a comprehensive real-time data dashboard for internal use, integrating live financial data using APIs. Built responsive UI with React.js and dynamic data visualization, ensuring seamless data sync and real-time updates. Collaborated with backend teams to design scalable API integrations and maintain performance under live data streams.",
       technologies: [
-        'React.js',
-        'HTML',
-        'CSS',
-        'Node.js',
-        'JavaScript',
-        'API Integration[REST]',
-        'Redux',
-        'Material UI',
+        "React.js",
+        "HTML",
+        "CSS",
+        "Node.js",
+        "JavaScript",
+        "API Integration[REST]",
+        "Redux",
+        "Material UI",
       ],
-      type: 'development',
+      type: "development",
     },
     {
-      title: 'Chipotle (Mexican Grill Restaurant Interface)',
-      company: 'Likedin Services Private Limited',
-      period: 'Feb 2020 - Dec 2023 | Full time',
-      role: 'UI Developer',
+      title: "Chipotle (Mexican Grill Restaurant Interface)",
+      company: "Likedin Services Private Limited",
+      period: "Feb 2020 - Dec 2023 | Full time",
+      role: "UI Developer",
       description:
-        'An internal web interface for restaurant kitchen crews to track food quantities and requirements in real time using smart camera integration. This system helped streamline the food prep process. Developed modular, responsive React components and integrated Redux for state management with Redux Saga for handling side effects. Collaborated with designers and backend teams to ensure data accuracy and applied SCSS for custom styling.',
+        "An internal web interface for restaurant kitchen crews to track food quantities and requirements in real time using smart camera integration. This system helped streamline the food prep process. Developed modular, responsive React components and integrated Redux for state management with Redux Saga for handling side effects. Collaborated with designers and backend teams to ensure data accuracy and applied SCSS for custom styling.",
       technologies: [
-        'React.js',
-        'Redux-Saga',
-        'HTML',
-        'CSS',
-        'Bootstrap',
-        'JavaScript',
+        "React.js",
+        "Redux-Saga",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
       ],
-      type: 'development',
+      type: "development",
     },
-  ]
+  ];
 
   const designTraining = [
     {
-      title: 'XpressEats – Rail Food Delivery App',
-      company: 'Designers Academy (Offsite)',
-      period: 'Jan 2025 – May 2025 | As a trainee',
-      role: 'UX/UI Designer',
+      title: "XpressEats – Rail Food Delivery App",
+      company: "Designers Academy (Offsite)",
+      period: "Jan 2025 – May 2025 | As a trainee",
+      role: "UX/UI Designer",
       description:
-        'Designed an end-to-end mobile experience to solve real train travel food issues like hygiene, limited options, and lack of customisation. Created comprehensive user flows, wireframes, high-fidelity mockups, and conducted extensive usability testing to ensure seamless ordering and delivery experience.',
+        "Designed an end-to-end mobile experience to solve real train travel food issues like hygiene, limited options, and lack of customisation. Created comprehensive user flows, wireframes, high-fidelity mockups, and conducted extensive usability testing to ensure seamless ordering and delivery experience.",
       technologies: [
-        'User Research',
-        'Wireframing',
-        'Prototyping',
-        'Usability Testing',
-        'Mobile Design',
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Usability Testing",
+        "Mobile Design",
       ],
-      type: 'design',
-      behanceLink: 'https://www.behance.net/naveen_seelam',
-      mediumLink: 'https://medium.com/@snrdesigns',
+      type: "design",
+      behanceLink: "https://www.behance.net/naveen_seelam",
+      mediumLink: "https://medium.com/@snrdesigns",
     },
     {
-      title: 'TNV Collection - Fashion E-commerce App',
-      company: 'Designers Academy (Offsite)',
-      period: 'Jan 2025 - May 2025 | As a trainee',
-      role: 'UX/UI Designer',
+      title: "TNV Collection - Fashion E-commerce App",
+      company: "Designers Academy (Offsite)",
+      period: "Jan 2025 - May 2025 | As a trainee",
+      role: "UX/UI Designer",
       description:
-        'Reimagined an existing fashion website into a mobile-first shopping experience tailored for a modern, style-conscious audience. Conducted comprehensive user research, defined personas, built user flows, and developed a clean, elegant UI with strong visual hierarchy and improved conversion rates.',
+        "Reimagined an existing fashion website into a mobile-first shopping experience tailored for a modern, style-conscious audience. Conducted comprehensive user research, defined personas, built user flows, and developed a clean, elegant UI with strong visual hierarchy and improved conversion rates.",
       technologies: [
-        'User Research',
-        'Wireframing',
-        'Prototyping',
-        'Usability Testing',
-        'Mobile Design',
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Usability Testing",
+        "Mobile Design",
       ],
-      type: 'design',
-      behanceLink: 'https://www.behance.net/naveen_seelam',
-      mediumLink: 'https://medium.com/@snrdesigns',
+      type: "design",
+      behanceLink: "https://www.behance.net/naveen_seelam",
+      mediumLink: "https://medium.com/@snrdesigns",
     },
-  ]
+  ];
 
   const mediaChannels = [
     {
-      platform: 'LinkedIn',
-      handle: '@seelam-naveen',
-      description: 'Professional updates and industry insights',
-      color: 'from-blue-600 to-blue-700',
-      link: 'https://www.linkedin.com/in/seelam-naveen',
+      platform: "LinkedIn",
+      handle: "@seelam-naveen",
+      description: "Professional updates and industry insights",
+      color: "from-blue-600 to-blue-700",
+      link: "https://www.linkedin.com/in/seelam-naveen",
     },
     {
-      platform: 'Instagram',
-      handle: '@snr_foodler',
-      description: 'Food photography and travel stories',
-      color: 'from-purple-500 to-pink-500',
-      link: 'https://www.instagram.com/snrfoodler/',
+      platform: "Instagram",
+      handle: "@snr_foodler",
+      description: "Food photography and travel stories",
+      color: "from-purple-500 to-pink-500",
+      link: "https://www.instagram.com/snrfoodler/",
     },
     {
-      platform: 'YouTube',
-      handle: '@SNR_FoodleR',
-      description: 'Recipe tutorials and travel vlogs',
-      color: 'from-red-600 to-red-700',
-      link: 'https://www.youtube.com/@SNR_FoodleR',
+      platform: "YouTube",
+      handle: "@SNR_FoodleR",
+      description: "Recipe tutorials and travel vlogs",
+      color: "from-red-600 to-red-700",
+      link: "https://www.youtube.com/@SNR_FoodleR",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
@@ -341,31 +341,31 @@ const Index = () => {
 
             <div className="hidden md:flex items-center space-x-8">
               <button
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection("about")}
                 className="text-gray-600 hover:text-gray-900 transition-all duration-200 font-medium hover:scale-105"
               >
                 About
               </button>
               <button
-                onClick={() => scrollToSection('work')}
+                onClick={() => scrollToSection("work")}
                 className="text-gray-600 hover:text-gray-900 transition-all duration-200 font-medium hover:scale-105"
               >
                 Work
               </button>
               <button
-                onClick={() => scrollToSection('interests')}
+                onClick={() => scrollToSection("interests")}
                 className="text-gray-600 hover:text-gray-900 transition-all duration-200 font-medium hover:scale-105"
               >
                 Interests
               </button>
               <button
-                onClick={() => scrollToSection('blog')}
+                onClick={() => scrollToSection("blog")}
                 className="text-gray-600 hover:text-gray-900 transition-all duration-200 font-medium hover:scale-105"
               >
                 Blog
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection("contact")}
                 className="text-gray-600 hover:text-gray-900 transition-all duration-200 font-medium hover:scale-105"
               >
                 Contact
@@ -393,31 +393,31 @@ const Index = () => {
             <div className="md:hidden mt-4 pb-4 border-t border-gray-100 animate-fade-in">
               <div className="flex flex-col space-y-4 pt-4">
                 <button
-                  onClick={() => scrollToSection('about')}
+                  onClick={() => scrollToSection("about")}
                   className="text-left text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   About
                 </button>
                 <button
-                  onClick={() => scrollToSection('work')}
+                  onClick={() => scrollToSection("work")}
                   className="text-left text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Work
                 </button>
                 <button
-                  onClick={() => scrollToSection('interests')}
+                  onClick={() => scrollToSection("interests")}
                   className="text-left text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Interests
                 </button>
                 <button
-                  onClick={() => scrollToSection('blog')}
+                  onClick={() => scrollToSection("blog")}
                   className="text-left text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Blog
                 </button>
                 <button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection("contact")}
                   className="text-left text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Contact
@@ -441,42 +441,42 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30 pt-20 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 text-6xl font-mono text-slate-200/40 animate-pulse opacity-20 select-none">
-            {'</>'}
+            {"</>"}
           </div>
           <div
             className="absolute top-40 right-20 text-4xl font-mono text-blue-200/50 animate-pulse opacity-30 select-none"
-            style={{ animationDelay: '1s' }}
+            style={{ animationDelay: "1s" }}
           >
-            {'{ }'}
+            {"{ }"}
           </div>
           <div
             className="absolute bottom-40 left-20 text-5xl font-mono text-indigo-200/40 animate-pulse opacity-25 select-none"
-            style={{ animationDelay: '2s' }}
+            style={{ animationDelay: "2s" }}
           >
-            {'<div/>'}
+            {"<div/>"}
           </div>
           <div
             className="absolute bottom-20 right-40 text-3xl font-mono text-slate-300/40 animate-pulse opacity-20 select-none"
-            style={{ animationDelay: '3s' }}
+            style={{ animationDelay: "3s" }}
           >
-            {'function()'}
+            {"function()"}
           </div>
           <div
             className="absolute top-32 right-10 w-20 h-20 border-2 border-blue-300/30 rotate-45 animate-spin opacity-20"
-            style={{ animationDuration: '20s' }}
+            style={{ animationDuration: "20s" }}
           ></div>
           <div
             className="absolute bottom-32 left-16 w-16 h-16 bg-gradient-to-r from-blue-200/40 to-indigo-200/40 rounded-full animate-bounce opacity-30"
-            style={{ animationDelay: '1s' }}
+            style={{ animationDelay: "1s" }}
           ></div>
           <div
             className="absolute top-1/2 right-32 w-12 h-12 border-2 border-slate-300/40 animate-pulse opacity-25"
-            style={{ animationDelay: '2s' }}
+            style={{ animationDelay: "2s" }}
           ></div>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100/30 to-indigo-100/30 rounded-full opacity-40 animate-pulse blur-3xl"></div>
           <div
             className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-slate-100/30 to-blue-100/30 rounded-full opacity-40 animate-pulse blur-3xl"
-            style={{ animationDelay: '1s' }}
+            style={{ animationDelay: "1s" }}
           ></div>
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-[0.03]"></div>
         </div>
@@ -489,7 +489,7 @@ const Index = () => {
                   <span className="relative h-20 md:h-24 flex items-center justify-center">
                     <span
                       className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-wide animate-slideUp"
-                      style={{ animationDelay: '0.2s' }}
+                      style={{ animationDelay: "0.2s" }}
                     >
                       Seelam
                     </span>
@@ -497,7 +497,7 @@ const Index = () => {
                   <span className="relative h-20 md:h-24 flex items-center justify-center">
                     <span
                       className="inline-block animate-slideUp"
-                      style={{ animationDelay: '0.6s' }}
+                      style={{ animationDelay: "0.6s" }}
                     >
                       Naveen
                     </span>
@@ -505,7 +505,7 @@ const Index = () => {
                   <span className="relative h-20 md:h-24 flex items-center justify-center">
                     <span
                       className="inline-block animate-slideUp"
-                      style={{ animationDelay: '1s' }}
+                      style={{ animationDelay: "1s" }}
                     >
                       Reddy
                     </span>
@@ -514,23 +514,24 @@ const Index = () => {
               </h1>
               <div
                 className="h-1 w-32 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full animate-scaleX"
-                style={{ animationDelay: '1.4s' }}
+                style={{ animationDelay: "1.4s" }}
               ></div>
             </div>
 
             {/* ✅ UPDATED subtitle */}
             <p
               className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light animate-slideUp"
-              style={{ animationDelay: '1.6s' }}
+              style={{ animationDelay: "1.6s" }}
             >
-              Senior Software Design Engineer | React |JavaScript | TypeScript | Next.js | Node.js
-              | Azure DevOps
+              Senior Software Design Engineer | PERN Stack Full-Stack Engineer |
+              React | JavaScript | TypeScript | Node.js | Express.js |
+              PostgreSQL | UI/UX Design | Git
             </p>
 
             {/* ✅ UPDATED tagline */}
             <p
               className="text-lg text-gray-500 font-light animate-slideUp"
-              style={{ animationDelay: '1.8s' }}
+              style={{ animationDelay: "1.8s" }}
             >
               Building scalable enterprise web applications with React.js, Vite,
               PWA, Accessibility & Modern Frontend Architecture — from
@@ -539,11 +540,11 @@ const Index = () => {
 
             <div
               className="flex justify-center animate-slideUp"
-              style={{ animationDelay: '2s' }}
+              style={{ animationDelay: "2s" }}
             >
               <Button
                 size="lg"
-                onClick={() => scrollToSection('work')}
+                onClick={() => scrollToSection("work")}
                 className="bg-gradient-to-r from-gray-900 to-black hover:from-black hover:to-gray-800 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-2xl group"
               >
                 <span className="flex items-center justify-center">
@@ -754,7 +755,7 @@ const Index = () => {
                           variant="outline"
                           size="sm"
                           onClick={() =>
-                            window.open(project.behanceLink, '_blank')
+                            window.open(project.behanceLink, "_blank")
                           }
                           className="rounded-full hover:scale-105 transition-transform duration-200"
                         >
@@ -765,7 +766,7 @@ const Index = () => {
                           variant="outline"
                           size="sm"
                           onClick={() =>
-                            window.open(project.mediumLink, '_blank')
+                            window.open(project.mediumLink, "_blank")
                           }
                           className="rounded-full hover:scale-105 transition-transform duration-200"
                         >
@@ -1017,7 +1018,7 @@ const Index = () => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
